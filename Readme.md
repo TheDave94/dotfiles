@@ -99,4 +99,4 @@ yay -S gnome-browser-connector
 
 ### Gnome Extensions
 [Dash-To-Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)\
-[Logo-Menu](https://extensions.gnome.org/extension/4451/logo-menu/)\
+[Logo-Menu](https://extensions.gnome.org/extension/4451/logo-menu/)
