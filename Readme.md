@@ -69,3 +69,10 @@ sudo systemctl start bluetooth.service
 sudo systemctl enable opensnitchd
 sudo systemctl start opensnitchd.service 
 ```
+
+# Interesting stuff
+
+### Clear Packagemanager cache
+```bash
+yay -Scc
+```
