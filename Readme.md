@@ -36,3 +36,45 @@ git clone https://aur.archlinux.org/yay.git && cd yay
 
 makepkg -si
 ```
+
+# Important Fixes
+
+### HiDPI Scaling Fix for Mutter
+```bash
+yay -S mutter-x11-scaling
+
+gsettings set org.gnome.mutter experimental-features "['x11-randr-fractional-scaling']"
+```
+
+# Service Configuration
+
+### CUPS (Printer) Service & Brother Driver
+```bash
+sudo systemctl enable cups.service
+sudo systemctl enable cups.socket
+sudo systemctl start cups.service
+
+yay -S brother-mfc-l2710dw
+```
+
+### Bluetooth Service
+```bash
+sudo systemctl enable cups.service
+sudo systemctl enable cups.socket
+sudo systemctl start cups.service
+
+yay -S brother-mfc-l2710dw
+```
+
+### Bluetooth Service
+```bash
+modprobe btusb
+sudo systemctl enable bluetooth.service
+sudo systemctl start bluetooth.service
+```
+
+### OpenSnitch Service
+```bash
+sudo systemctl enable opensnitchd
+sudo systemctl start opensnitchd.service 
+```
