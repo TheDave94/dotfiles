@@ -80,29 +80,20 @@ yay -Scc
 ### Important Software
 ```bash
 sudo pacman -S bitwarden discord kitty
-
 yay -S brave-bin
-
 yay -S jdk-temurin
-
 yay -S swift-bin
-
 sudo pacman -S dotnet-sdk mono
-
 sudo pacman -S gdb
-
 yay -S visual-studio-code-bin
-
 yay -S intellij-idea-ultimate-edition
-
 yay -S rider
-
 yay -S android-studio
-
 yay -S clion
-
 yay -S flutter
-
 yay -S gnome-browser-connector
-
 ```
+
+### Gnome Extensions
+https://extensions.gnome.org/extension/307/dash-to-dock/
+https://extensions.gnome.org/extension/4451/logo-menu/
