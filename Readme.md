@@ -27,3 +27,12 @@ git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZS
 
 sudo cp $PWD/.zshrc $HOME/.zshrc
 ```
+
+# Setup Arch AUR
+
+### Install yay
+```bash
+git clone https://aur.archlinux.org/yay.git && cd yay
+
+makepkg -si
+```
