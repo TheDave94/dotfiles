@@ -27,7 +27,7 @@ git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZS
 
 sudo cp $PWD/.zshrc $HOME/.zshrc
 ```
-\
+
 
 # Setup Arch AUR
 
@@ -37,7 +37,7 @@ git clone https://aur.archlinux.org/yay.git && cd yay
 
 makepkg -si
 ```
-\
+
 
 # Important Fixes
 
@@ -71,7 +71,7 @@ sudo systemctl start bluetooth.service
 sudo systemctl enable opensnitchd
 sudo systemctl start opensnitchd.service 
 ```
-\
+
 
 # Interesting stuff
 
@@ -98,5 +98,5 @@ yay -S gnome-browser-connector
 ```
 
 ### Gnome Extensions
-[Dash-To-Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)<space>
-[Logo-Menu](https://extensions.gnome.org/extension/4451/logo-menu/)<space>
+[Dash-To-Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)\
+[Logo-Menu](https://extensions.gnome.org/extension/4451/logo-menu/)\
