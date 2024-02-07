@@ -59,15 +59,6 @@ yay -S brother-mfc-l2710dw
 
 ### Bluetooth Service
 ```bash
-sudo systemctl enable cups.service
-sudo systemctl enable cups.socket
-sudo systemctl start cups.service
-
-yay -S brother-mfc-l2710dw
-```
-
-### Bluetooth Service
-```bash
 modprobe btusb
 sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
