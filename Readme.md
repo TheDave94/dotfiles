@@ -103,3 +103,8 @@ yay -S gnome-browser-connector
 [Clipboard Manager](https://extensions.gnome.org/extension/779/clipboard-indicator/)\
 [Tray Icons](https://extensions.gnome.org/extension/2890/tray-icons-reloaded/)\
 [Transparent Top Bar](https://extensions.gnome.org/extension/3960/transparent-top-bar-adjustable-transparency/)\
+[App Menu](https://extensions.gnome.org/extension/6433/app-menu-is-back/)\
+[Top Hat](https://extensions.gnome.org/extension/5219/tophat/)\
+[Blur-My-Shell](https://extensions.gnome.org/extension/3193/blur-my-shell/)\
+[Custom Accent Colors](https://extensions.gnome.org/extension/5547/custom-accent-colors/)\
+[Rounded Corners](https://extensions.gnome.org/extension/1514/rounded-corners/)
