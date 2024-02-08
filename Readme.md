@@ -95,7 +95,17 @@ yay -S android-studio
 yay -S clion
 yay -S flutter
 yay -S gnome-browser-connector
+yay -S microsoft-edge-stable-bin
+yay -S ungoogled-chromium-bin
 ```
+
+### Startpage Search Query
+```bash
+Startpage.com
+:sp
+https://www.startpage.com/do/search?q=%s
+```
+
 
 ### Gnome Extensions
 [Dash-To-Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)\
