@@ -99,4 +99,7 @@ yay -S gnome-browser-connector
 
 ### Gnome Extensions
 [Dash-To-Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)\
-[Logo-Menu](https://extensions.gnome.org/extension/4451/logo-menu/)
+[Logo-Menu](https://extensions.gnome.org/extension/4451/logo-menu/)\
+[Clipboard Manager](https://extensions.gnome.org/extension/779/clipboard-indicator/)\
+[Tray Icons](https://extensions.gnome.org/extension/2890/tray-icons-reloaded/)\
+[Transparent Top Bar](https://extensions.gnome.org/extension/3960/transparent-top-bar-adjustable-transparency/)\
