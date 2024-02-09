@@ -94,6 +94,7 @@ yay -S brave-bin
 yay -S jdk-temurin
 yay -S swift-bin
 sudo pacman -S dotnet-sdk mono
+sudo pacman -S cmake clang ninja
 sudo pacman -S gdb
 yay -S visual-studio-code-bin
 yay -S intellij-idea-ultimate-edition
