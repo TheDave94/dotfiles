@@ -38,6 +38,13 @@ git clone https://aur.archlinux.org/yay.git && cd yay
 makepkg -si
 ```
 
+### Package compress
+```bash
+sudo nano /etc/makepkg.conf
+
+PKGEXT='.pkg.tar'
+```
+
 
 # Important Fixes
 
