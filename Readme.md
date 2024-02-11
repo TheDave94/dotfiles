@@ -1,18 +1,30 @@
-# Basic system component installation
+# Base
 
 ### Systemupdate
+
+Update with pacman first.
+
 ```bash
 sudo pacman -Syu
 ```
 
+Later you can update with yay (or at least for the AUR Packages.)
+
+```bash
+yay
+```
+
+
 ### Delete standard GNOME apps
+
 ```bash
 sudo pacman -Rns totem gnome-weather gnome-contacts gnome-clocks gnome-maps gnome-music
 ```
 
+
 ### Installing the basic components
 ```bash
-sudo pacman -S git ttf-meslo-nerd powerline-fonts base-devel nodejs npm python bluez bluez-utils cups cups-pdf zsh which
+sudo pacman -S git ttf-meslo-nerd powerline-fonts base-devel nodejs npm python bluez bluez-utils cups cups-pdf zsh which noto-fonts-cjk noto-fonts-extra noto-fonts-emoji
 ```
 
 ### Installing oh-my-zsh and plugins
@@ -48,7 +60,7 @@ PKGEXT='.pkg.tar'
 
 # Important Fixes
 
-### HiDPI Scaling Fix for Mutter
+### HiDPI Scaling Fix for Mutter<>
 ```bash
 yay -S mutter-x11-scaling
 
