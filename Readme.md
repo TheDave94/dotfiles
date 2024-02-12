@@ -117,6 +117,13 @@ yay -S flutter
 yay -S gnome-browser-connector
 yay -S microsoft-edge-stable-bin
 yay -S ungoogled-chromium-bin
+yay -S --noconfirm zsh-theme-powerlevel10k-git
+```
+
+### Config files
+```bash
+~/.config/kitty/kitty.conf
+~/.zshrc
 ```
 
 ### Startpage Search Query
