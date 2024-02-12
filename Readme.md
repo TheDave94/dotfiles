@@ -22,9 +22,14 @@ sudo pacman -Rns totem gnome-weather gnome-contacts gnome-clocks gnome-maps gnom
 ```
 
 
+### Installing needed Software
+```bash
+sudo pacman -S git base-devel bluez bluez-utils cups cups-pdf zsh which
+```
+
 ### Installing the basic components
 ```bash
-sudo pacman -S git ttf-meslo-nerd powerline-fonts base-devel nodejs npm python bluez bluez-utils cups cups-pdf zsh which noto-fonts-cjk noto-fonts-extra noto-fonts-emoji ttf-hack-nerd
+sudo pacman -S ttf-meslo-nerd powerline-fonts noto-fonts-cjk noto-fonts-extra noto-fonts-emoji ttf-hack-nerd
 ```
 
 ### Installing oh-my-zsh and plugins
@@ -99,32 +104,36 @@ sudo systemctl start opensnitchd.service
 yay -Scc
 ```
 
-### Important Software
+### Terminal
 ```bash
-sudo pacman -S bitwarden discord kitty
-yay -S brave-bin
-yay -S jdk-temurin
-yay -S swift-bin
-sudo pacman -S dotnet-sdk mono
-sudo pacman -S cmake clang ninja
-sudo pacman -S gdb
+yay -S --noconfirm zsh-theme-powerlevel10k-git ruby-colorls
+```
+
+### Dev-Tools
+```bash
+yay -S jdk-temurin flutter swift-bin
+sudo pacman -S dotnet-sdk mono cmake clang ninja gdb nodejs npm python
 yay -S visual-studio-code-bin
 yay -S intellij-idea-ultimate-edition
 yay -S rider
 yay -S android-studio
 yay -S clion
-yay -S flutter
+```
+
+### Browser
+```bash
+sudo pacman -S chromium
 yay -S gnome-browser-connector
 yay -S microsoft-edge-stable-bin
 yay -S ungoogled-chromium-bin
-yay -S --noconfirm zsh-theme-powerlevel10k-git
+yay -S thorium-browser-bin
 ```
 
 ### Config files
 ```bash
-~/.config/kitty/kitty.conf
-~/.zshrc
-/etc/makepkg.conf
+cp -a -f kitty.conf ~/.config/kitty/
+cp -a -f .zshrc ~/
+cp -a -f makepkg.conf /etc/
 ```
 
 ### Startpage Search Query
