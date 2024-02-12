@@ -32,17 +32,28 @@ sudo pacman -S git base-devel bluez bluez-utils cups cups-pdf zsh which
 sudo pacman -S ttf-meslo-nerd powerline-fonts noto-fonts-cjk noto-fonts-extra noto-fonts-emoji ttf-hack-nerd
 ```
 
-### Installing oh-my-zsh and plugins
+### Installing oh-my-zsh
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-sudo pacman -S zsh-autosuggestions zsh-syntax-highlighting
+```
 
+### Installing plugins
+```bash
+sudo pacman -S zsh-autosuggestions zsh-syntax-highlighting
+```
+
+### Installing plugins pt. 2
+```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
 ```
 
+### Terminal styling
+```bash
+yay -S --noconfirm zsh-theme-powerlevel10k-git ruby-colorls
+```
 
 # Setup Arch AUR
 
@@ -108,11 +119,6 @@ sudo pacman -S discord bitwarden chromium evolution opensnitch
 ```
 
 ## Dev-Tools
-
-### Terminal
-```bash
-yay -S --noconfirm zsh-theme-powerlevel10k-git ruby-colorls
-```
 
 ### SDKs (Pacman)
 ```bash
