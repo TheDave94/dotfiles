@@ -124,6 +124,7 @@ yay -S --noconfirm zsh-theme-powerlevel10k-git
 ```bash
 ~/.config/kitty/kitty.conf
 ~/.zshrc
+/etc/makepkg.conf
 ```
 
 ### Startpage Search Query
