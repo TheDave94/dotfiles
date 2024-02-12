@@ -24,7 +24,7 @@ sudo pacman -Rns totem gnome-weather gnome-contacts gnome-clocks gnome-maps gnom
 
 ### Installing the basic components
 ```bash
-sudo pacman -S git ttf-meslo-nerd powerline-fonts base-devel nodejs npm python bluez bluez-utils cups cups-pdf zsh which noto-fonts-cjk noto-fonts-extra noto-fonts-emoji
+sudo pacman -S git ttf-meslo-nerd powerline-fonts base-devel nodejs npm python bluez bluez-utils cups cups-pdf zsh which noto-fonts-cjk noto-fonts-extra noto-fonts-emoji ttf-hack-nerd
 ```
 
 ### Installing oh-my-zsh and plugins
