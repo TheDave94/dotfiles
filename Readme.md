@@ -27,7 +27,7 @@ sudo pacman -Rns totem gnome-weather gnome-contacts gnome-clocks gnome-maps gnom
 sudo pacman -S git base-devel bluez bluez-utils cups cups-pdf zsh which
 ```
 
-### Installing the basic components
+### Installing fonts
 ```bash
 sudo pacman -S ttf-meslo-nerd powerline-fonts noto-fonts-cjk noto-fonts-extra noto-fonts-emoji ttf-hack-nerd
 ```
