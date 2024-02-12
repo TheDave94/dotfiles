@@ -95,43 +95,100 @@ sudo systemctl start opensnitchd.service
 ```
 
 
-# Interesting stuff
-
 ### Clear Packagemanager cache
 ```bash
 yay -Scc
 ```
+
+# Software Installation Guide
+
+## Dev-Tools
 
 ### Terminal
 ```bash
 yay -S --noconfirm zsh-theme-powerlevel10k-git ruby-colorls
 ```
 
-### Dev-Tools
+### SDKs (Pacman)
 ```bash
-yay -S jdk-temurin flutter swift-bin
 sudo pacman -S dotnet-sdk mono cmake clang ninja gdb nodejs npm python
-yay -S visual-studio-code-bin
-yay -S intellij-idea-ultimate-edition
-yay -S rider
-yay -S android-studio
-yay -S clion
 ```
 
-### Browser
+### SDKs (AUR)
+```bash
+yay -S jdk-temurin flutter swift-bin
+```
+
+### Visual Studio Code
+```bash
+yay -S visual-studio-code-bin
+```
+
+### JetBrains
+```bash
+yay -S intellij-idea-ultimate-edition rider clion clion-jre pycharm-professional
+```
+
+### Android Studio
+```bash
+yay -S android-studio
+```
+
+## Browser
+
+### Chromium
 ```bash
 sudo pacman -S chromium
-yay -S gnome-browser-connector
+```
+
+### Microsoft Edge
+```bash
 yay -S microsoft-edge-stable-bin
+```
+### Ungoogled Chromium
+```bash
 yay -S ungoogled-chromium-bin
+```
+
+### Thorium Browser
+```bash
 yay -S thorium-browser-bin
 ```
 
-### Config files
+## Gnome Tweaks
+
+### Gnome Browser Connector
+```bash
+yay -S gnome-browser-connector
+```
+
+# Config Files
+
+### Kitty
 ```bash
 cp -a -f kitty.conf ~/.config/kitty/
+```
+
+### Oh-My-Zsh
+```bash
 cp -a -f .zshrc ~/
+```
+
+### Makepkg
+```bash
 cp -a -f makepkg.conf /etc/
+```
+
+# Good to know
+
+### Clear caches
+```bash
+yay -Scc
+```
+
+### Remove not needed Packages
+```bash
+yay -Yc
 ```
 
 ### Startpage Search Query
