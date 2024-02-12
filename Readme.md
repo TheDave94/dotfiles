@@ -102,6 +102,11 @@ yay -Scc
 
 # Software Installation Guide
 
+## Basic System Software (Pacman)
+```bash
+sudo pacman -S discord bitwarden chromium evolution opensnitch
+```
+
 ## Dev-Tools
 
 ### Terminal
@@ -140,6 +145,7 @@ yay -S android-studio
 ```bash
 sudo pacman -S chromium
 ```
+Already installed with "Basic System Software (Pacman)"
 
 ### Microsoft Edge
 ```bash
