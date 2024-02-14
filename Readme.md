@@ -23,8 +23,8 @@ yay
 sudo pacman -Rscn totem gnome-weather gnome-contacts gnome-clocks gnome-maps gnome-music
 ```
 
-* -R will remove the package.
-* -Rcns will remove the package, each dependency (if no longer required) and configuration files.
+* Adding `-R` will remove the package.
+* Adding `-Rcns` will remove the package, each dependency (if no longer required) and configuration files.
 
 The example above removes unneeded Gnome apps, as I would not use them anyway. 
 
