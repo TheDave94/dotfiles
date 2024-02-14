@@ -49,6 +49,26 @@ sudo pacman -S ttf-meslo-nerd powerline-fonts noto-fonts-cjk noto-fonts-extra no
 
 This command installs all required fonts. You can certainly remove one or the other, and you can also install others, but these have proven themselves so far. 
 
+### Arch AUR Setup
+
+### Install yay
+```shell
+git clone https://aur.archlinux.org/yay.git && cd yay
+
+makepkg -si
+```
+
+### Package compress
+```shell
+sudo nano /etc/makepkg.conf
+```
+
+* Add `PKGEXT='.pkg.tar'` to "EXTENSION DEFAULTS"
+
+The following skips compression of the package file, which will in turn have no need to be decompressed. It speeds up the installation progress.
+
+
+
 ### Installing Oh-My-Zsh
 
 #### Run the Installer
@@ -70,22 +90,6 @@ git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZS
 #### Styling zsh
 ```bash
 yay -S --noconfirm zsh-theme-powerlevel10k-git ruby-colorls
-```
-
-# Setup Arch AUR
-
-### Install yay
-```bash
-git clone https://aur.archlinux.org/yay.git && cd yay
-
-makepkg -si
-```
-
-### Package compress
-```bash
-sudo nano /etc/makepkg.conf
-
-PKGEXT='.pkg.tar'
 ```
 
 xf86-input-mtrack-git
