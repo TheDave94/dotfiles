@@ -71,6 +71,7 @@ sudo nano /etc/makepkg.conf
 PKGEXT='.pkg.tar'
 ```
 
+xf86-input-mtrack-git
 
 # Important Fixes
 
@@ -196,6 +197,13 @@ cp -a -f makepkg.conf /etc/
 ### Clear caches
 ```bash
 yay -Scc
+```
+
+### Fix nVidia Driver Hibernation
+```bash
+sudo systemctl enable nvidia-suspend.service
+sudo systemctl enable nvidia-hibernate.service
+sudo systemctl enable nvidia-resume.service
 ```
 
 ### Remove not needed Packages
