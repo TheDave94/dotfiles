@@ -3,11 +3,9 @@
 This repository is used to perform a simplified Arch Linux installation without having to search for packages. 
 This should also serve to introduce Arch Linux to other people.
 
-## Topic
+### Basic Installation Guide
 
-[TOC]
-
-### Complete update of the system
+#### System Update
 
 ```shell
 sudo pacman -Syu
@@ -19,7 +17,7 @@ Later you can also use yay to run updates. However, I would recommend carrying o
 yay
 ```
 
-### Remove an App
+#### Remove an App
 
 ```shell
 sudo pacman -Rscn totem gnome-weather gnome-contacts gnome-clocks gnome-maps gnome-music
@@ -30,7 +28,7 @@ sudo pacman -Rscn totem gnome-weather gnome-contacts gnome-clocks gnome-maps gno
 
 The example above removes unneeded Gnome apps, as I would not use them anyway. 
 
-### Install an App
+#### Install an App
 ```shell
 sudo pacman -S git base-devel bluez bluez-utils cups cups-pdf zsh which
 ```
@@ -44,32 +42,32 @@ The example above installs important apps.
 * zsh is a unix-shell. (Needed if you want to use Oh-My-Zsh later).
 * which is used to identify a location of a given executable.
 
-### Installing fonts
+#### Installing fonts
 ```shell
 sudo pacman -S ttf-meslo-nerd powerline-fonts noto-fonts-cjk noto-fonts-extra noto-fonts-emoji ttf-hack-nerd ttf-ms-win11-auto
 ```
 
 This command installs all required fonts. You can certainly remove one or the other, and you can also install others, but these have proven themselves so far. 
 
-### Installing oh-my-zsh
-```bash
+### Installing Oh-My-Zsh
+
+#### Run the Installer
+
+```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-### Installing plugins
-```bash
+#### Getting the plugins
+```shell
 sudo pacman -S zsh-autosuggestions zsh-syntax-highlighting
-```
 
-### Installing plugins pt. 2
-```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
 ```
 
-### Terminal styling
+#### Styling zsh
 ```bash
 yay -S --noconfirm zsh-theme-powerlevel10k-git ruby-colorls
 ```
