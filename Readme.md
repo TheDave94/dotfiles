@@ -145,22 +145,22 @@ sudo pacman -S dotnet-sdk mono cmake clang ninja gdb nodejs npm python
 
 ### SDKs (AUR)
 ```bash
-yay -S jdk-temurin flutter swift-bin
+yay -S --noconfirm jdk-temurin flutter swift-bin
 ```
 
 ### Visual Studio Code
 ```bash
-yay -S visual-studio-code-bin
+yay -S --noconfirm visual-studio-code-bin
 ```
 
 ### JetBrains
 ```bash
-yay -S intellij-idea-ultimate-edition rider clion clion-jre pycharm-professional
+yay -S --noconfirm intellij-idea-ultimate-edition rider clion clion-jre pycharm-professional
 ```
 
 ### Android Studio
 ```bash
-yay -S android-studio
+yay -S --noconfirm android-studio
 ```
 
 ## Browser
@@ -173,23 +173,23 @@ Already installed with "Basic System Software (Pacman)"
 
 ### Microsoft Edge
 ```bash
-yay -S microsoft-edge-stable-bin
+yay -S --noconfirm microsoft-edge-stable-bin
 ```
 ### Ungoogled Chromium
 ```bash
-yay -S ungoogled-chromium-bin
+yay -S --noconfirm ungoogled-chromium-bin
 ```
 
 ### Thorium Browser
 ```bash
-yay -S thorium-browser-bin
+yay -S --noconfirm thorium-browser-bin
 ```
 
 ## Gnome Tweaks
 
 ### Gnome Browser Connector
 ```bash
-yay -S gnome-browser-connector
+yay -S --noconfirm gnome-browser-connector
 ```
 
 # Config Files
