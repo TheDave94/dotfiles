@@ -67,8 +67,6 @@ sudo nano /etc/makepkg.conf
 
 The following skips compression of the package file, which will in turn have no need to be decompressed. It speeds up the installation progress.
 
-
-
 ### Installing Oh-My-Zsh
 
 #### Run the Installer
@@ -87,12 +85,47 @@ git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZS
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
 ```
 
-#### Styling zsh
-```bash
-yay -S --noconfirm zsh-theme-powerlevel10k-git ruby-colorls
+#### Adding the plugins to .zshrc
+```shell
+nano ~/.zshrc
 ```
 
-xf86-input-mtrack-git
+```shell
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete)
+
+# Plugin Setup
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#a8a8a8"
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
+ZSH_AUTOSUGGEST_USE_ASYNC="1"
+ZSH_AUTOSUGGEST_HISTORY_IGNORE="cd *"
+```
+
+#### Adding powerlevel10k
+```shell
+yay -S --noconfirm zsh-theme-powerlevel10k-git
+echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+```
+
+#### Styling ls & la
+```shell
+yay -S --noconfirm ruby-colorls
+```
+
+#### Adding ruby-colorls to .zshrc
+```shell
+nano ~/.zshrc
+```
+
+```shell
+# Colorls
+if [ -x "$(command -v colorls)" ]; then
+    alias ls="colorls"
+    alias la="colorls -al"
+fi
+```
+
+
 
 # Important Fixes
 
