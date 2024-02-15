@@ -6,8 +6,13 @@ This should also serve to introduce Arch Linux to other people.
 ### Table of contents
 
 * ### [The Basics](guide/basic.md)
+    * #### [System Update](./guide/basic.md#System-Update)
+    * #### [Remove an App](./guide/basic.md#Remove-an-App)
+    * #### [Install an App](./guide/basic.md#Install-an-App)
+    * #### [Installing fonts](./guide/basic.md#Installing-fonts)
 * ### [Setting up AUR](./guide/aur.md)
-    * #### [Package compress](./guide/aur.md#Package compress)
+    * #### [Install yay](./guide/aur.md#Install-yay)
+    * #### [Package Compress](./guide/aur.md#Package-Compress)
 
 ### Installing Oh-My-Zsh
 
