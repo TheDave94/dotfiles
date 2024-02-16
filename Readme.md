@@ -169,6 +169,17 @@ Startpage.com
 https://www.startpage.com/do/search?q=%s
 ```
 
+### Styling guide
+```bash
+yay -S --noconfirm whitesur-gtk-theme
+yay -S --noconfirm whitesur-cursor-theme-git
+yay -S --noconfirm whitesur-icon-theme
+```
+
+### libadwaita fix
+```bash
+yay -S --noconfirm libadwaita-without-adwaita-git
+```
 
 ### Gnome Extensions
 [Dash-To-Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)\
@@ -180,4 +191,5 @@ https://www.startpage.com/do/search?q=%s
 [Top Hat](https://extensions.gnome.org/extension/5219/tophat/)\
 [Blur-My-Shell](https://extensions.gnome.org/extension/3193/blur-my-shell/)\
 [Custom Accent Colors](https://extensions.gnome.org/extension/5547/custom-accent-colors/)\
-[Rounded Corners](https://extensions.gnome.org/extension/1514/rounded-corners/)
+[Rounded Corners](https://extensions.gnome.org/extension/1514/rounded-corners/)\
+[Appindicator Support](https://extensions.gnome.org/extension/615/appindicator-support/)

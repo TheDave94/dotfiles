@@ -43,3 +43,9 @@ sudo pacman -S ttf-meslo-nerd powerline-fonts noto-fonts-cjk noto-fonts-extra no
 ```
 
 This command installs all required fonts. You can certainly remove one or the other, and you can also install others, but these have proven themselves so far.
+
+```shell
+yay -S sf-fonts
+```
+
+This command installs the Apple macOS Systemfont
