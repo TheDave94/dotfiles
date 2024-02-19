@@ -42,7 +42,12 @@ yay -S yourApp
 * Using `yay -S` is necessary to install apps from the AUR.
 
 ---
-
+#### Installing important fonts
+```shell
+sudo pacman -S ttf-meslo-nerd powerline-fonts noto-fonts-cjk noto-fonts-extra noto-fonts-emoji ttf-hack-nerd
+```
+* These are the most important fonts. These should display all characters correctly. 
+---
 #### Remove an App
 
 ```shell
@@ -317,6 +322,17 @@ yay -S ...
 **Cursor**
 * `whitesur-gtk-theme` 
 * `whitesur-cursor-theme-git`
+---
+#### Fonts (AUR)
+
+```shell
+yay -S ...
+```
+
+**Fonts**
+* `sf-fonts` 
+* `ttf-ms-win11-auto`
+* `plank-theme-arian-git`
 
 ### Good to know
 
