@@ -332,7 +332,6 @@ yay -S ...
 **Fonts**
 * `sf-fonts` 
 * `ttf-ms-win11-auto`
-* `plank-theme-arian-git`
 
 ### Good to know
 
