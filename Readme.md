@@ -22,7 +22,6 @@ sudo pacman -S git base-devel bluez bluez-utils cups cups-pdf zsh which flatpak 
 
 * Adding `-S` is necessary for an installation.
 <br>
-<br>
 
 * git is self-explanatory.
 * bluez and bluez-utils is needed for Bluetooth.
