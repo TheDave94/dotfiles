@@ -320,7 +320,6 @@ yay -S ...
 * `whitesur-icon-theme`
 ---
 **Cursor**
-* `whitesur-gtk-theme` 
 * `whitesur-cursor-theme-git`
 ---
 #### Fonts (AUR)
@@ -377,3 +376,7 @@ cp -a -f makepkg.conf /etc/
 ```shell
 cp -a -f nvidia.conf /etc/modprobe.d/
 ```
+---
+#### Interesting Links
+
+https://community.kde.org/Plasma/Wayland/Nvidia
