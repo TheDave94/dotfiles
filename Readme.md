@@ -265,7 +265,8 @@ sudo pacman -S ...
 * `gnome-screenshot`
 * `lightdm-gtk-greeter-settings` - **Only needed if you use lightdm-greeter**
 * `opensnitch`
-* `plan` - **Only needed if you want to have a dock**
+* `plank` - **Only needed if you want to have a dock**
+* `cinnamon-translations`
 ---
 **SDK & Devtools**
 * `dotnet-sdk` 
