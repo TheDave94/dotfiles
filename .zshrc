@@ -106,3 +106,17 @@ ZSH_AUTOSUGGEST_HISTORY_IGNORE="cd *"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Aliases
+if [ -f ~/.zsh_aliases ]; then
+    . ~/.zsh_aliases
+fi
+
+# Colorls
+# if [ -x "$(command -v colorls)" ]; then
+    # alias ls="colorls -al"
+    # alias la="colorls"
+# fi
+
+# zoxide
+# eval "$(zoxide init --cmd cd zsh)"
