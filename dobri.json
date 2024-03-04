@@ -1,0 +1,36 @@
+{
+    "background-color": "#0B1015",
+    "badge-color": "#FFFFFF",
+    "bold-color": "#FFFFFF",
+    "comment": "",
+    "cursor-background-color": "#000000",
+    "cursor-foreground-color": "#FFFFFF",
+    "foreground-color": "#A1B0B8",
+    "highlight-background-color": "#000000",
+    "highlight-foreground-color": "#FFFFFF",
+    "name": "dobri",
+    "palette": [
+        "#252525",
+        "#FB467B",
+        "#C3E88D",
+        "#F78C6B",
+        "#E05151",
+        "#C792EA",
+        "#6696E6",
+        "#F5F5F5",
+        "#708284",
+        "#FB467B",
+        "#C3E88D",
+        "#F78C6B",
+        "#FFCC00",
+        "#C792EA",
+        "#FFCC00",
+        "#0B1015"
+    ],
+    "use-badge-color": false,
+    "use-bold-color": false,
+    "use-cursor-color": false,
+    "use-highlight-color": false,
+    "use-theme-colors": false
+}
+
