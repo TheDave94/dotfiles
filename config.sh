@@ -11,12 +11,6 @@ ln -sf $PWD/files/.zshrc $HOME/
 ln -sf $PWD/files/.aliases $HOME/
 
 echo "----------------------------------"
-echo "Change file makepkg.conf"
-echo "----------------------------------"
-
-sudo ln -sf $PWD/files/makepkg.conf /etc/
-
-echo "----------------------------------"
 echo "Creating folder /etc/cmdline.d/"
 echo "----------------------------------"
 
