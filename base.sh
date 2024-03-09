@@ -10,19 +10,19 @@ echo "Performing package installation: pacman -S"
 echo "-------------------------------------------------"
 
 packages=(
-    git
-    base-devel
-    bluez
-    bluez-utils
-    cups
-    cups-pdf
-    zsh
-    which
-    github-cli
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-    fzf
-    ufw
+    "git"
+    "base-devel"
+    "bluez"
+    "bluez-utils"
+    "cups"
+    "cups-pdf"
+    "zsh"
+    "which"
+    "github-cli"
+    "zsh-autosuggestions"
+    "zsh-syntax-highlighting"
+    "fzf"
+    "ufw"
 )
 
 for package in "${packages[0]}"; do

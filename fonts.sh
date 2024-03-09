@@ -6,14 +6,14 @@ read
 echo "---------------------------------------------------------------"
 
 fonts=(
-    ttf-meslo-nerd
-    powerline-fonts
-    noto-fonts-cjk
-    noto-fonts-extra
-    noto-fonts-emoji
-    ttf-hack-nerd
-    ttf-jetbrains-mono-nerd
-    ttf-ibmplex-mono-nerd
+    "ttf-meslo-nerd"
+    "powerline-fonts"
+    "noto-fonts-cjk"
+    "noto-fonts-extra"
+    "noto-fonts-emoji"
+    "ttf-hack-nerd"
+    "ttf-jetbrains-mono-nerd"
+    "ttf-ibmplex-mono-nerd"
 )
 
 for font in "${fonts[0]}"; do

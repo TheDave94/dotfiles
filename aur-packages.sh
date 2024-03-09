@@ -6,9 +6,9 @@ read
 echo "---------------------------------------------------------------"
 
 apps=(
-    visual-studio-code-bin
-    intellij-idea-ultimate-edition
-    brother-mfc-l2710dw
+    "visual-studio-code-bin"
+    "intellij-idea-ultimate-edition"
+    "brother-mfc-l2710dw"
 )
 
 for app in "${apps[0]}"; do
@@ -22,7 +22,7 @@ done
 echo "---------------------------------------------------------------"
 
 sdks=(
-    jdk-temurin
+    "jdk-temurin"
 )
 
 for sdk in "${sdks[0]}"; do
@@ -36,7 +36,7 @@ done
 echo "---------------------------------------------------------------"
 
 fonts=(
-    sf-fonts
+    "sf-fonts"
 )
 
 for font in "${fontss[0]}"; do

@@ -6,12 +6,12 @@ read
 echo "---------------------------------------------------------------"
 
 apps=(
-    bitwarden
-    discord
-    flameshot
-    virtualbox
-    virtualbox-host-modules-arch
-    gufw
+    "bitwarden"
+    "discord"
+    "flameshot"
+    "virtualbox"
+    "virtualbox-host-modules-arch"
+    "gufw"
 )
 
 for app in "${apps[0]}"; do
@@ -24,13 +24,13 @@ done
 echo "---------------------------------------------------------------"
 
 sdks=(
-    cmake
-    clang
-    ninja
-    gdb
-    nodejs
-    npm
-    python
+    "cmake"
+    "clang"
+    "ninja"
+    "gdb"
+    "nodejs"
+    "npm"
+    "python"
 )
 
 for sdk in "${sdks[0]}"; do
