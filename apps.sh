@@ -5,8 +5,8 @@ apps=(
     "bitwarden"
     "discord"
     "flameshot"
-    "virtualbox"
     "virtualbox-host-modules-arch"
+    "virtualbox"
     "gufw"
     "tilix"
 )
@@ -55,12 +55,9 @@ aur_fonts=(
 
 echo "Start software installation on the system."
 echo "From here on, some things need to be confirmed!"
-echo "14ess enter to continue..."
-read
-
-echo "S."
 echo "Press enter to continue..."
 read
+
 echo "---------------------------------------------------------------"
 
 for app in "${apps[@]}"; do
