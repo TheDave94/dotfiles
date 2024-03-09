@@ -38,7 +38,10 @@ echo "-------------------------------------------------"
 echo "Installing oh-my-zsh"
 echo "-------------------------------------------------"
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh
+sed -i.tmp 's:env zsh::g' install.sh
+sed -i.tmp 's:chsh -s .*$::g' install.sh
+sh install.sh
 
 echo "-------------------------------------------------"
 echo "Adding plugins"
@@ -48,3 +51,4 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugi
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
+
