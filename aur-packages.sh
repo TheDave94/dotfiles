@@ -15,7 +15,7 @@ for app in "${apps[@]}"; do
     echo "----------------------------------"
     echo "Installing app: ${app}"
     echo "----------------------------------"
-    y ${app}
+    yay -S --noconfirm ${app}
 done
 
 
@@ -29,7 +29,7 @@ for sdk in "${sdks[@]}"; do
     echo "----------------------------------"
     echo "Installing SDK: ${sdk}"
     echo "----------------------------------"
-    y ${sdk}
+    yay -S --noconfirm ${sdk}
 done
 
 
@@ -43,5 +43,5 @@ for font in "${fontss[@]}"; do
     echo "----------------------------------"
     echo "Installing Font: ${font}"
     echo "----------------------------------"
-    y ${font}
+    yay -S --noconfirm ${font}
 done

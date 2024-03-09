@@ -12,6 +12,7 @@ apps=(
     "virtualbox"
     "virtualbox-host-modules-arch"
     "gufw"
+    "tilix"
 )
 
 for app in "${apps[@]}"; do
