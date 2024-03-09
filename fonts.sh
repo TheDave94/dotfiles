@@ -20,5 +20,5 @@ for font in "${fonts[0]}"; do
     echo "----------------------------------"
     echo "Installing font: $font"
     echo "----------------------------------"
-    sudo pacman -S --needed $font
+    sudo pacman -S --needed ${font}
 done
