@@ -29,7 +29,7 @@ for package in "${packages[@]}"; do
     echo "----------------------------------"
     echo "Installing package: $package"
     echo "----------------------------------"
-    sudo pacman -S --needed ${package}
+    sudo pacman -S --needed --noconfirm ${package}
 done
 
 echo "---------------------------------------------------------------"
@@ -38,10 +38,10 @@ echo "-------------------------------------------------"
 echo "Installing oh-my-zsh"
 echo "-------------------------------------------------"
 
-wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh
-sed -i.tmp 's:env zsh::g' install.sh
-sed -i.tmp 's:chsh -s .*$::g' install.sh
-sh install.sh
+mkdir $PWD/zsh && cd $PWD/zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed 's:env zsh::g' | sed 's:chsh -s .*$::g')"
+cd ../
+rm -rf zsh
 
 echo "-------------------------------------------------"
 echo "Adding plugins"

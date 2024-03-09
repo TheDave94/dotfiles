@@ -18,7 +18,7 @@ for app in "${apps[@]}"; do
     echo "----------------------------------"
     echo "Installing app: ${app}"
     echo "----------------------------------"
-    sudo pacman -S --needed ${app}
+    sudo pacman -S --needed --noconfirm ${app}
 done
 
 echo "---------------------------------------------------------------"
@@ -37,5 +37,5 @@ for sdk in "${sdks[@]}"; do
     echo "----------------------------------"
     echo "Installing SDK: ${sdk}"
     echo "----------------------------------"
-    sudo pacman -S --needed ${sdk}
+    sudo pacman -S --needed --noconfirm ${sdk}
 done
