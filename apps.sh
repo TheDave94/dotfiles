@@ -35,6 +35,7 @@ fonts=(
 flatpaks=(
     "com.todoist.Todoist"
     "com.spotify.Client"
+    "com.mattjakeman.ExtensionManager"
 )
 
 aur_apps=(
