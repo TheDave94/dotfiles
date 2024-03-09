@@ -29,7 +29,7 @@ for package in "${packages[0]}"; do
     echo "----------------------------------"
     echo "Installing package: $package"
     echo "----------------------------------"
-    sudo pacman -S --needed ${file}
+    sudo pacman -S --needed ${package}
 done
 
 echo "---------------------------------------------------------------"

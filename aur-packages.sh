@@ -15,7 +15,7 @@ for app in "${apps[0]}"; do
     echo "----------------------------------"
     echo "Installing app: ${app}"
     echo "----------------------------------"
-    y $app
+    y ${app}
 done
 
 
@@ -29,7 +29,7 @@ for sdk in "${sdks[0]}"; do
     echo "----------------------------------"
     echo "Installing SDK: ${sdk}"
     echo "----------------------------------"
-    y $sdk
+    y ${sdk}
 done
 
 
@@ -43,5 +43,5 @@ for font in "${fontss[0]}"; do
     echo "----------------------------------"
     echo "Installing Font: ${font}"
     echo "----------------------------------"
-    y $font
+    y ${font}
 done
