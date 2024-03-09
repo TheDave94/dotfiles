@@ -79,3 +79,9 @@ echo "Change shell from bash to zsh"
 echo "----------------------------------"
 
 chsh -s $(which zsh)
+
+echo "----------------------------------"
+echo "Set new permissions for VS-Code folder."
+echo "----------------------------------"
+
+sudo chown -R $(whoami) /opt/visual-studio-code
