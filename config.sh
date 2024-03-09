@@ -37,6 +37,12 @@ rm -rf tilix-gruvbox
 sudo mkinitcpio -P
 
 echo "----------------------------------"
+echo "Write Chromium Settings"
+echo "----------------------------------"
+
+cp -r $PWD/files/Preferences $HOME/.config/chromium/Default
+
+echo "----------------------------------"
 echo "Activate CUPS Service"
 echo "----------------------------------"
 
@@ -85,3 +91,10 @@ echo "Set new permissions for Virtualbox"
 echo "----------------------------------"
 
 sudo usermod -a -G vboxusers $(whoami)
+
+echo "----------------------------------"
+echo "Cleaning"
+echo "----------------------------------"
+
+yay -Scc
+yay -Yc
