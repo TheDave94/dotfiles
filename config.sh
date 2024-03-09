@@ -79,3 +79,9 @@ echo "Set new permissions for VS-Code folder."
 echo "----------------------------------"
 
 sudo chown -R $(whoami) /opt/visual-studio-code
+
+echo "----------------------------------"
+echo "Set new permissions for Virtualbox"
+echo "----------------------------------"
+
+sudo usermod -a -G vboxusers $(whoami)
