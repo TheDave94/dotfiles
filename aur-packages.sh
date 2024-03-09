@@ -11,7 +11,7 @@ apps=(
     "brother-mfc-l2710dw"
 )
 
-for app in "${apps[0]}"; do
+for app in "${apps[@]}"; do
     echo "----------------------------------"
     echo "Installing app: ${app}"
     echo "----------------------------------"
@@ -25,7 +25,7 @@ sdks=(
     "jdk-temurin"
 )
 
-for sdk in "${sdks[0]}"; do
+for sdk in "${sdks[@]}"; do
     echo "----------------------------------"
     echo "Installing SDK: ${sdk}"
     echo "----------------------------------"
@@ -39,7 +39,7 @@ fonts=(
     "sf-fonts"
 )
 
-for font in "${fontss[0]}"; do
+for font in "${fontss[@]}"; do
     echo "----------------------------------"
     echo "Installing Font: ${font}"
     echo "----------------------------------"

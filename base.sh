@@ -25,7 +25,7 @@ packages=(
     "ufw"
 )
 
-for package in "${packages[0]}"; do
+for package in "${packages[@]}"; do
     echo "----------------------------------"
     echo "Installing package: $package"
     echo "----------------------------------"

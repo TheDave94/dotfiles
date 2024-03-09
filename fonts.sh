@@ -16,7 +16,7 @@ fonts=(
     "ttf-ibmplex-mono-nerd"
 )
 
-for font in "${fonts[0]}"; do
+for font in "${fonts[@]}"; do
     echo "----------------------------------"
     echo "Installing font: $font"
     echo "----------------------------------"
