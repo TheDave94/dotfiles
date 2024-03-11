@@ -24,17 +24,26 @@ echo "----------------------------------"
 sudo ln -sf $PWD/files/nvidia.conf /etc/modprobe.d/
 
 echo "----------------------------------"
-echo "Adding tilix themes"
+echo "Downloading Tilix themes"
 echo "----------------------------------"
 
 cd $PWD/files/
 git clone https://github.com/MichaelThessel/tilix-gruvbox.git
-cd tilix-gruvbox
-sudo cp -r gruvbox-dark-hard.json gruvbox-dark-medium.json gruvbox-dark-soft.json gruvbox-dark.json /usr/share/schemes/
+cd $PWD/tilix-gruvbox
+sudo cp -r gruvbox-dark-hard.json gruvbox-dark-medium.json gruvbox-dark-soft.json gruvbox-dark.json /usr/share/tilix/schemes/
 cd ../
 rm -rf tilix-gruvbox
 
-sudo mkinitcpio -P
+echo "----------------------------------"
+echo "Downloading themes"
+echo "----------------------------------"
+
+cd $PWD/files/
+git clone https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme.git
+cd $PWD/Gruvbox-GTK-Theme/themes/
+sudo cp -r Gruvbox-Dark-B-LB Gruvbox-Dark-B Gruvbox-Dark-BL-LB Gruvbox-Dark-BL /usr/share/themes/
+cd  ../../
+rm -rf Gruvbox-GTK-Theme
 
 echo "----------------------------------"
 echo "Write Chromium Settings"
@@ -98,3 +107,13 @@ echo "----------------------------------"
 
 yay -Scc
 yay -Yc
+
+sudo mkinitcpio -P
+
+echo "----------------------------------"
+echo "Finishing"
+echo "----------------------------------"
+
+if [ $XDG_CURRENT_DESKTOP = "GNOME" ]; then 
+    sudo pacman -Rcns gnome-music totem yelp gnome-contacts gnome-clocks gnome-maps vim
+fi
