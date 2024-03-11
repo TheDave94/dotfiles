@@ -48,7 +48,7 @@ echo "----------------------------------"
 echo "Write Chromium Settings"
 echo "----------------------------------"
 
-cp -r $PWD/Preferences $HOME/.config/chromium/Default
+# cp -r $PWD/Preferences $HOME/.config/chromium/Default
 
 echo "----------------------------------"
 echo "Activate CUPS Service"
