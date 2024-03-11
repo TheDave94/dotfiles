@@ -38,7 +38,6 @@ echo "----------------------------------"
 echo "Downloading themes"
 echo "----------------------------------"
 
-cd $PWD/files/
 git clone https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme.git
 cd $PWD/Gruvbox-GTK-Theme/themes/
 sudo cp -r Gruvbox-Dark-B-LB Gruvbox-Dark-B Gruvbox-Dark-BL-LB Gruvbox-Dark-BL /usr/share/themes/
