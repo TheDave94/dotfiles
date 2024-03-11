@@ -5,8 +5,6 @@ apps=(
     "bitwarden"
     "discord"
     "flameshot"
-    "virtualbox-host-modules-arch"
-    "virtualbox"
     "gufw"
     "tilix"
 )
@@ -33,7 +31,6 @@ fonts=(
 )
 
 flatpaks=(
-    "com.todoist.Todoist"
     "com.spotify.Client"
     "com.mattjakeman.ExtensionManager"
 )
