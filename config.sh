@@ -114,5 +114,5 @@ echo "Finishing"
 echo "----------------------------------"
 
 if [ $XDG_CURRENT_DESKTOP = "GNOME" ]; then 
-    sudo pacman -Rcns gnome-music totem yelp gnome-contacts gnome-clocks gnome-maps vim
+    sudo pacman -Rcns gnome-music totem yelp gnome-contacts gnome-clocks gnome-maps gnome-weather vim
 fi
