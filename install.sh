@@ -40,6 +40,33 @@ cp -r files/custom.lua $HOME/.dotconf
 
 echo "---------------------------------------------------------------"
 
+echo "-------------------------------------------------"
+echo "Install Flatpak for KDE"
+echo "-------------------------------------------------"
+
+if [[ "$1" == "--kde" ]]; then
+    sudo pacman -S --needed --noconfirm flatpak xdg-desktop-portal xdg-desktop-portal-kde xdg-desktop-portal-gtk
+fi
+
+echo "-------------------------------------------------"
+echo "Install Flatpak for Cinnamon"
+echo "-------------------------------------------------"
+
+if [[ "$1" == "--cinnamon" ]]; then
+    sudo pacman -S --needed --noconfirm flatpak xdg-desktop-portal xdg-desktop-portal-xapp xdg-desktop-portal-gtk gnome-software
+fi
+
+echo "-------------------------------------------------"
+echo "Install Flatpak for Xfce"
+echo "-------------------------------------------------"
+
+if [[ "$1" == "--xfce" ]]; then
+    sudo pacman -S --needed --noconfirm flatpak xdg-desktop-portal xdg-desktop-portal-xapp xdg-desktop-portal-gtk gnome-software
+fi
+
+
+echo "---------------------------------------------------------------"
+
 # Installing base packages
 
 echo "-------------------------------------------------"
@@ -334,8 +361,8 @@ echo "----------------------------------"
 echo "Finishing"
 echo "----------------------------------"
 
-if [ $XDG_CURRENT_DESKTOP = "GNOME" ]; then 
-    sudo pacman -Rcns gnome-music totem yelp gnome-contacts gnome-clocks gnome-maps gnome-weather vim
+if [[ "$1" == "--gnome" ]]; then
+    sudo pacman -Rcns gnome-music totem yelp gnome-contacts gnome-clocks gnome-maps gnome-weather
 fi
 
 sudo mkinitcpio -P
