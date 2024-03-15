@@ -40,6 +40,8 @@ cp -r files/custom.lua $HOME/.dotconf
 
 echo "---------------------------------------------------------------"
 
+# Parameters to install flatpak
+
 echo "-------------------------------------------------"
 echo "Install Flatpak for KDE"
 echo "-------------------------------------------------"
