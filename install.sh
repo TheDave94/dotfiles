@@ -55,7 +55,7 @@ echo "Install Flatpak for Cinnamon"
 echo "-------------------------------------------------"
 
 if [[ "$1" == "--cinnamon" ]]; then
-    sudo pacman -S --needed --noconfirm flatpak xdg-desktop-portal xdg-desktop-portal-xapp xdg-desktop-portal-gtk gnome-software
+    sudo pacman -S --needed --noconfirm flatpak xdg-desktop-portal xdg-desktop-portal-xapp xdg-desktop-portal-gtk gnome-software xarchiver cinnamon-translations
 fi
 
 echo "-------------------------------------------------"
