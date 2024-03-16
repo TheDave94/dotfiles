@@ -100,6 +100,7 @@ packages=(
     "p7zip"
     "libheif"
     "nvim"
+    "ntfs-3g"
 )
 
 for package in "${packages[@]}"; do
