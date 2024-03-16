@@ -42,27 +42,27 @@ echo "---------------------------------------------------------------"
 
 # Parameters to install flatpak
 
-echo "-------------------------------------------------"
-echo "Install Flatpak for KDE"
-echo "-------------------------------------------------"
-
 if [[ "$1" == "--kde" ]]; then
+    echo "-------------------------------------------------"
+    echo "Installing Flatpak for KDE"
+    echo "-------------------------------------------------"
+
     sudo pacman -S --needed --noconfirm flatpak xdg-desktop-portal xdg-desktop-portal-kde xdg-desktop-portal-gtk
 fi
 
-echo "-------------------------------------------------"
-echo "Install Flatpak for Cinnamon"
-echo "-------------------------------------------------"
-
 if [[ "$1" == "--cinnamon" ]]; then
+    echo "-------------------------------------------------"
+    echo "Install Flatpak for Cinnamon"
+    echo "-------------------------------------------------"
+
     sudo pacman -S --needed --noconfirm flatpak xdg-desktop-portal xdg-desktop-portal-xapp xdg-desktop-portal-gtk gnome-software xarchiver cinnamon-translations
 fi
 
-echo "-------------------------------------------------"
-echo "Install Flatpak for Xfce"
-echo "-------------------------------------------------"
-
 if [[ "$1" == "--xfce" ]]; then
+    echo "-------------------------------------------------"
+    echo "Install Flatpak for Xfce"
+    echo "-------------------------------------------------"
+    
     sudo pacman -S --needed --noconfirm flatpak xdg-desktop-portal xdg-desktop-portal-xapp xdg-desktop-portal-gtk gnome-software
 fi
 
