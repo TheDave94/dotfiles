@@ -117,7 +117,7 @@ echo "-------------------------------------------------"
 echo "Performing Oh-My-Zsh Installation"
 echo "-------------------------------------------------"
 
-mkdir zsh %% cd zshx
+mkdir zsh && cd zshx
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 cd ../
 rm -rf zsh
