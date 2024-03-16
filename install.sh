@@ -40,6 +40,35 @@ cp -r files/custom.lua $HOME/.dotconf
 
 echo "---------------------------------------------------------------"
 
+# Parameters to install flatpak
+
+if [[ "$1" == "--kde" ]]; then
+    echo "-------------------------------------------------"
+    echo "Installing Flatpak for KDE"
+    echo "-------------------------------------------------"
+
+    sudo pacman -S --needed --noconfirm flatpak xdg-desktop-portal xdg-desktop-portal-kde xdg-desktop-portal-gtk
+fi
+
+if [[ "$1" == "--cinnamon" ]]; then
+    echo "-------------------------------------------------"
+    echo "Install Flatpak for Cinnamon"
+    echo "-------------------------------------------------"
+
+    sudo pacman -S --needed --noconfirm flatpak xdg-desktop-portal xdg-desktop-portal-xapp xdg-desktop-portal-gtk gnome-software xarchiver cinnamon-translations
+fi
+
+if [[ "$1" == "--xfce" ]]; then
+    echo "-------------------------------------------------"
+    echo "Install Flatpak for Xfce"
+    echo "-------------------------------------------------"
+    
+    sudo pacman -S --needed --noconfirm flatpak xdg-desktop-portal xdg-desktop-portal-xapp xdg-desktop-portal-gtk gnome-software
+fi
+
+
+echo "---------------------------------------------------------------"
+
 # Installing base packages
 
 echo "-------------------------------------------------"
@@ -192,15 +221,11 @@ echo "Performing Software Installation"
 echo "-------------------------------------------------"
 
 apps=(
+    "chromium"
     "bitwarden"
     "discord"
-    "flameshot"
     "gufw"
     "tilix"
-    "supercollider"
-    "reaper"
-    "vlc"
-    "nextcloud-client"
 )
 
 sdks=(
@@ -270,19 +295,10 @@ echo "---------------------------------------------------------------"
 # Installing Software from the AUR.
 
 aur_apps=(
-    "protonmail-bridge"
-    "protonmail-desktop"
-    "betterbird-de-bin"
-    "beeper-latest-bin"
-    "onlyoffice-bin"
-    "brave-bin"
     "visual-studio-code-bin"
     "intellij-idea-ultimate-edition"
-    "brother-hll2340dw"
+    "brother-mfc-l2710dw"
     "microsoft-edge-stable-bin"
-    "localsend"
-    "threema-desktop"
-    "wps-office"
 )
 
 aur_sdks=(
@@ -347,8 +363,8 @@ echo "----------------------------------"
 echo "Finishing"
 echo "----------------------------------"
 
-if [ $XDG_CURRENT_DESKTOP = "GNOME" ]; then 
-    sudo pacman -Rcns gnome-music totem yelp gnome-contacts gnome-clocks gnome-maps gnome-weather vim
+if [[ "$1" == "--gnome" ]]; then
+    sudo pacman -Rcns gnome-music totem yelp gnome-contacts gnome-clocks gnome-maps gnome-weather
 fi
 
 sudo mkinitcpio -P
