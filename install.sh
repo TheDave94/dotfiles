@@ -312,6 +312,7 @@ aur_apps=(
     "localsend"
     "threema-desktop"
     "wps-office"
+    "yubico-authenticator-bin"
 )
 
 aur_sdks=(
