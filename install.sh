@@ -221,11 +221,15 @@ echo "Performing Software Installation"
 echo "-------------------------------------------------"
 
 apps=(
-    "chromium"
     "bitwarden"
     "discord"
+    "flameshot"
     "gufw"
     "tilix"
+    "supercollider"
+    "reaper"
+    "vlc"
+    "nextcloud-client"
 )
 
 sdks=(
@@ -295,10 +299,19 @@ echo "---------------------------------------------------------------"
 # Installing Software from the AUR.
 
 aur_apps=(
+    "protonmail-bridge"
+    "protonmail-desktop"
+    "betterbird-de-bin"
+    "beeper-latest-bin"
+    "onlyoffice-bin"
+    "brave-bin"
     "visual-studio-code-bin"
     "intellij-idea-ultimate-edition"
-    "brother-mfc-l2710dw"
+    "brother-hll2340dw"
     "microsoft-edge-stable-bin"
+    "localsend"
+    "threema-desktop"
+    "wps-office"
 )
 
 aur_sdks=(
