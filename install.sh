@@ -71,6 +71,7 @@ pkgs=(
   "lazygit"
   "system-config-printer"
   "intellij-idea-community-edition"
+  "solaar"
 # ---------- # 
   "materia-kde"
   "kvantum-theme-materia"
