@@ -78,6 +78,7 @@ alias install="sudo pacman -S --needed --noconfirm"
 alias update="yay -Syuu --noconfirm && yay -Scc --noconfirm && yay -Yc --noconfirm"
 alias remove="sudo pacman -Rncs --noconfirm"
 alias unlock="sudo rm /var/lib/pacman/db.lck"
+alias clean="cd /var/cache/pacman/pkg && sudo rm -rf * && cd"
 
 alias y="yay -S --needed --noconfirm"
 alias yr="yay -Rncs --noconfirm"
