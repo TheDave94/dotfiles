@@ -57,12 +57,10 @@ pkgs=(
 # ----------- #  
   "bitwarden"
   "vlc"
-  "obs-studio"
   "gufw"
   "linux-firmware-qlogic"
   "spotify-launcher"
   "kitty"
-  "neovim"
   "spectacle"
   "partitionmanager"
   "okular"
@@ -158,16 +156,9 @@ mkdir -p ~/.config/kitty/
 ln -sf $PWD/config/kitty/kitty.conf ~/.config/kitty/
 ln -sf $PWD/config/kitty/current-theme.conf ~/.config/kitty/
 
-echo "--- Configuring Neovim ---"
-
-ln -sf $PWD/config/nvim ~/.config/
-
 echo "--- Installing Language Servers ---"
 
 sudo pacman -S --needed --noconfirm pyright go
-
-sudo npm i -g vscode-langservers-extracted
-sudo npm install -g typescript typescript-language-server
 
 go install golang.org/x/tools/gopls@latest
 go install github.com/go-delve/delve/cmd/dlv@latest
