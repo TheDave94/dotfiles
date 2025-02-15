@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  // Settings
+  "vim_mode": false,
+
   // --- UI Styling
   "ui_font_size": 21,
   "ui_font_family": "Maple Mono NF",
