@@ -1,0 +1,68 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  // --- UI Styling
+  "ui_font_size": 21,
+  "ui_font_family": "Maple Mono NF",
+  "ui_font_weight": 520,
+  "theme": {
+    "mode": "system",
+    "light": "Atelier Cave Dark",
+    "dark": "Atelier Cave Dark"
+  },
+  "icon_theme": "Catppuccin Macchiato",
+  "features": {
+    "edit_prediction_provider": "none"
+  },
+
+  // -- UI Panels
+  "project_panel": {
+    "default_width": 250,
+    "button": true,
+    "dock": "right"
+  },
+  "notification_panel": {
+    "button": false
+  },
+  "git_panel": {
+    "button": false
+  },
+  "outline_panel": {
+    "button": false
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "assistant": {
+    "version": "1",
+    "button": false
+  },
+
+  // -- UI Tabs
+  "tabs": {
+    "show_icons": true,
+    "git_status": true,
+    "close_position": "right"
+  },
+
+  // -- Editor Styling
+  "buffer_font_size": 18,
+  "buffer_font_family": "Maple Mono NF",
+  "buffer_font_weight": 520,
+  "buffer_line_height": {
+    "custom": 1.8
+  },
+  "terminal": {
+    "shell": "system"
+  },
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  }
+}
