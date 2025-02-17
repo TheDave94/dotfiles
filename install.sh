@@ -112,6 +112,7 @@ aurpkgs=(
   "anydesk-bin"
   "rustdesk-bin"
   "brave-beta-bin"
+  "ungoogled-chromium-bin"
   "megasync-bin"
   "ttf-maple"
   "ttf-ms-win11-auto"
