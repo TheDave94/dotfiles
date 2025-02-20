@@ -117,6 +117,7 @@ aurpkgs=(
   "ttf-ms-win11-auto"
   "jdk-temurin"
   "vmware-workstation"
+  "kanata-bin"
 )
 
 for pkg in ${aurpkgs[@]}; do
@@ -200,6 +201,15 @@ sudo systemctl enable nvidia-resume.service
 sudo ln -sf $PWD/config/nvidia/nvidia.conf /etc/modprobe.d/
 sudo ln -sf $PWD/config/nvidia/nvidia_drm.conf /etc/modprobe.d/
 sudo ln -sf $PWD/config/nvidia/environment /etc/
+
+echo "--- Configuring Kanata ---"
+
+sudo ln -sf $PWD/config/kanata/kanata.service /etc/systemd/system/
+sudo systemctl enable kanata.service
+sudo systemctl start kanata.service
+
+mkdir -p ~/.config/kanata
+ln -sf $PWD/config/kanata/main.kbd ~/.config/kanata/
 
 echo "--- Cleaning Up ---"
 
