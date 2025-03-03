@@ -69,7 +69,7 @@ pkgs=(
   "lazygit"
   "system-config-printer"
   "intellij-idea-community-edition"
-  "solaar"
+  "chromium"
 # ---------- # 
   "materia-kde"
   "kvantum-theme-materia"
@@ -109,9 +109,8 @@ aurpkgs=(
   "upd72020x-fw"
   "ast-firmware"
   "visual-studio-code-bin"
-  "anydesk-bin"
   "rustdesk-bin"
-  "brave-beta-bin"
+  "brave-bin"
   "megasync-bin"
   "ttf-maple"
   "ttf-ms-win11-auto"
@@ -157,15 +156,15 @@ mkdir -p ~/.config/kitty/
 ln -sf $PWD/config/kitty/kitty.conf ~/.config/kitty/
 ln -sf $PWD/config/kitty/current-theme.conf ~/.config/kitty/
 
-echo "--- Installing Language Servers ---"
+# echo "--- Installing Language Servers ---"
 
-sudo pacman -S --needed --noconfirm pyright go
+# sudo pacman -S --needed --noconfirm pyright go
 
-go install golang.org/x/tools/gopls@latest
-go install github.com/go-delve/delve/cmd/dlv@latest
-go install golang.org/x/tools/cmd/goimports@latest
-go install github.com/nametake/golangci-lint-langserver@latest
-go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+# go install golang.org/x/tools/gopls@latest
+# go install github.com/go-delve/delve/cmd/dlv@latest
+# go install golang.org/x/tools/cmd/goimports@latest
+# go install github.com/nametake/golangci-lint-langserver@latest
+# go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
 
 echo "--- Installing Themes ---"
 
@@ -194,9 +193,11 @@ echo "--- Configuring Nvidia ---"
 
 sudo pacman -S --needed --noconfirm libva-nvidia-driver
 
+sudo systemctl daemon-reload
 sudo systemctl enable nvidia-suspend.service
 sudo systemctl enable nvidia-hibernate.service
 sudo systemctl enable nvidia-resume.service
+sudo systemctl daemon-reload
 
 sudo ln -sf $PWD/config/nvidia/nvidia.conf /etc/modprobe.d/
 sudo ln -sf $PWD/config/nvidia/nvidia_drm.conf /etc/modprobe.d/
@@ -205,8 +206,10 @@ sudo ln -sf $PWD/config/nvidia/environment /etc/
 echo "--- Configuring Kanata ---"
 
 sudo ln -sf $PWD/config/kanata/kanata.service /etc/systemd/system/
+sudo systemctl daemon-reload
 sudo systemctl enable kanata.service
 sudo systemctl start kanata.service
+sudo systemctl daemon-reload
 
 mkdir -p ~/.config/kanata
 ln -sf $PWD/config/kanata/main.kbd ~/.config/kanata/
