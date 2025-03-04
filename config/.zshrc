@@ -33,7 +33,7 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 export TERMINAL="ghostty"
 export TERM="xterm-256color"
-export BROWSER="brave-beta"
+export BROWSER="brave"
 
 # -- Path
 
