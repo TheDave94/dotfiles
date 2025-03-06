@@ -16,5 +16,5 @@ echo "--- Installing JetBrains Tools ---"
 
 for pkg in ${pkgs[@]}; do
   echo "-- Installing: $pkg"
-  sudo yay -S --needed --noconfirm ${pkg}
+  yay -S --needed --noconfirm ${pkg}
 done
