@@ -68,13 +68,11 @@ pkgs=(
   "gimp"
   "lazygit"
   "system-config-printer"
-  "intellij-idea-community-edition"
-  "chromium"
 # ---------- # 
-  "materia-kde"
-  "kvantum-theme-materia"
-  "materia-gtk-theme"
-  "gtk-engine-murrine"
+# "materia-kde"
+# "kvantum-theme-materia"
+#  "materia-gtk-theme"
+# "gtk-engine-murrine"
 # ---------- # 
   "cmake"
   "clang"
@@ -166,20 +164,6 @@ ln -sf $PWD/config/kitty/current-theme.conf ~/.config/kitty/
 # go install github.com/nametake/golangci-lint-langserver@latest
 # go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
 
-echo "--- Installing Themes ---"
-
-git clone https://github.com/vinceliuice/WhiteSur-cursors.git
-cd WhiteSur-cursors
-./install.sh 
-cd ..
-rm -rf WhiteSur-cursors
-
-git clone https://github.com/vinceliuice/Tela-circle-icon-theme.git
-cd Tela-circle-icon-theme
-./install.sh manjaro
-cd ..
-rm -rf Tela-circle-icon-theme
-
 echo "--- Tmux ---"
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -199,13 +183,13 @@ sudo systemctl enable nvidia-hibernate.service
 sudo systemctl enable nvidia-resume.service
 sudo systemctl daemon-reload
 
-sudo ln -sf $PWD/config/nvidia/nvidia.conf /etc/modprobe.d/
-sudo ln -sf $PWD/config/nvidia/nvidia_drm.conf /etc/modprobe.d/
+sudo cp -r $PWD/config/nvidia/nvidia.conf /etc/modprobe.d/
+sudo cp -r $PWD/config/nvidia/nvidia_drm.conf /etc/modprobe.d/
 sudo ln -sf $PWD/config/nvidia/environment /etc/
 
 echo "--- Configuring Kanata ---"
 
-sudo ln -sf $PWD/config/kanata/kanata.service /etc/systemd/system/
+sudo cp -r $PWD/config/kanata/kanata.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable kanata.service
 sudo systemctl start kanata.service
