@@ -1,33 +1,65 @@
-term = xterm-ghostty
+# This is the configuration file for Ghostty.
+#
+# This template file has been automatically created at the following
+# path since Ghostty couldn't find any existing config files on your system:
+#
+#   /home/fox/.config/ghostty/config
+#
+# The template does not set any default options, since Ghostty ships
+# with sensible defaults for all options. Users should only need to set
+# options that they want to change from the default.
+#
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
 
-theme = dark:catppuccin-macchiato, light:catppuccin-macchiato
-background-opacity = 1.0
-background-blur-radius = 64
+# Config syntax crash course
+# ==========================
+# # The config file consists of simple key-value pairs,
+# # separated by equals signs.
+# font-family = Iosevka
+# window-padding-x = 2
+#
+# # Spacing around the equals sign does not matter.
+# # All of these are identical:
+# key=value
+# key= value
+# key =value
+# key = value
+#
+# # Any line beginning with a # is a comment. It's not possible to put
+# # a comment after a config option, since it would be interpreted as a
+# # part of the value. For example, this will have a value of "#123abc":
+# background = #123abc
+#
+# # Empty values are used to reset config keys to default.
+# key =
+#
+# # Some config options have unique syntaxes for their value,
+# # which is explained in the docs for that config option.
+# # Just for example:
+# resize-overlay-duration = 4s 200ms
 
-cursor-style = block
-cursor-style-blink = true
+theme = catppuccin-macchiato
 
 font-family = Maple Mono NF
-font-style-bold = default
-font-style-italic = default
-font-style-bold-italic = default
 font-size = 16
-font-feature = -liga
-adjust-cell-height = 20%
+adjust-cell-height = 15%
 
-window-width = 512
-window-height = 512
-window-decoration = true
+cursor-style = block
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 2
+
+window-padding-balance = true
 window-padding-x = 10
-window-padding-y = 10
-window-step-resize = true
+window-padding-y = 5
+
+window-width = 165
+window-height = 35
+
+window-save-state = always
 window-colorspace = "display-p3"
 
-mouse-hide-while-typing = true
-clipboard-read = allow
-clipboard-paste-bracketed-safe = true
-copy-on-select = true
-desktop-notifications = true
-gtk-adwaita = false
-gtk-titlebar = false
-shell-integration-features = no-cursor,sudo,no-title
+shell-integration-features = no-cursor,sudo
