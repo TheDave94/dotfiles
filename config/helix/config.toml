@@ -1,54 +1,27 @@
-theme = "tokyotrans"
+theme = "catppuccin_macchiato"
 
 [editor]
-scrolloff = 5
-mouse = false
+idle-timeout = 0
+auto-save = true
+soft-wrap.enable = true
 middle-click-paste = false
-scroll-lines = 3
-shell = ["sh", "-c"]
-line-number = "relative"
-cursorline = false
-cursorcolumn = false
-gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+true-color = true
+line-number = "absolute"
 auto-completion = true
+bufferline = "multiple"
+cursorline = true
 auto-format = true
-auto-save = false
-idle-timeout = 400
-completion-trigger-len = 2
-auto-info = true
-true-color = false
-rulers = []
-bufferline = "never"
-color-modes = false
-auto-pairs = true
-
-[editor.statusline]
-left = ["mode", "spinner", "version-control"]
-center = ["file-name"]
-right  = ["diagnostics", "selections", "position", "file-encoding"]
-separator = "|"
-mode.normal = "NOR"
-mode.insert = "INS"
-mode.select = "SEL"
 
 [editor.lsp]
-display-messages = false
-auto-signature-help = true
-display-signature-help-docs = true
+display-messages = true
+display-inlay-hints = true
 
 [editor.cursor-shape]
+insert = "bar"
 normal = "block"
-insert = "block"
-select = "block"
+select = "underline"
 
-[editor.file-picker]
-hidden = true
-parents = true
-ignore = true
-git-ignore = true
-git-global = true
-git-exclude = true
-
-[editor.search]
-smart-case = true
-wrap-around = true
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "version-control", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
