@@ -57,6 +57,7 @@ pkgs=(
 # ----------- #  
   "bitwarden"
   "vlc"
+  "obs-studio"
   "gufw"
   "linux-firmware-qlogic"
   "spotify-launcher"
@@ -68,10 +69,15 @@ pkgs=(
   "gimp"
   "lazygit"
   "system-config-printer"
+  "kdeconnect"
+  "solaar"
+  "nextcloud-client"
+  "reaper"
+  "supercollider"
 # ---------- # 
 # "materia-kde"
 # "kvantum-theme-materia"
-#  "materia-gtk-theme"
+# "materia-gtk-theme"
 # "gtk-engine-murrine"
 # ---------- # 
   "cmake"
@@ -100,7 +106,7 @@ done
 echo "--- Installing AUR Software ---"
 
 aurpkgs=(
-  "brother-mfc-l2710dw"
+  "brother-hll2340dw"
   "zoom"
   "aic94xx-firmware"
   "wd719x-firmware"
@@ -108,12 +114,20 @@ aurpkgs=(
   "ast-firmware"
   "visual-studio-code-bin"
   "rustdesk-bin"
-  "brave-bin"
+  "brave-beta-bin"
   "megasync-bin"
   "ttf-maple"
   "ttf-ms-win11-auto"
   "jdk-temurin"
   "vmware-workstation"
+  "protonmail-bridge"
+  "protonmail-desktop"
+  "beeper-latest-bin"
+  "intellij-idea-ultimate-edition"
+  "localsend"
+  "wps-office"
+  "mullvad-browser-bin"
+  "betterbird-de-bin"
   "kanata-bin"
 )
 
