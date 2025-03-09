@@ -75,10 +75,10 @@ alias catnn="bat --style=numbers"
 alias catn="bat --style=numbers,changes"
 
 alias install="sudo pacman -S --needed --noconfirm"
-alias update="yay -Syuu --noconfirm && yay -Scc --noconfirm && yay -Yc --noconfirm && rustup update"
+alias update="yay -Syuu --noconfirm && yay -Scc --noconfirm && yay -Yc --noconfirm && rustup update && clean"
 alias remove="sudo pacman -Rncs --noconfirm"
 alias unlock="sudo rm /var/lib/pacman/db.lck"
-alias clean="cd /var/cache/pacman/pkg && sudo rm -rf * && cd"
+alias clean="cd /var/cache/pacman/pkg && sudo rm -rf * && cd ~/.cache/ && rm -rf * && cd"
 
 alias y="yay -S --needed --noconfirm"
 alias yr="yay -Rncs --noconfirm"
