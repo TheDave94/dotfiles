@@ -55,29 +55,29 @@ pkgs=(
   "xclip"
   "tree"
   "ripgrep"
+  "tmux"
 # ----------- #  
   "bitwarden"
   "vlc"
-  "obs-studio"
   "gufw"
   "linux-firmware-qlogic"
   "spotify-launcher"
   "ghostty"
-  "neovim"
   "gimp"
   "lazygit"
   "system-config-printer"
-  "tmux"
 # ---------- # 
-
+# Add some themes here
 # ---------- # 
   "cmake"
   "clang"
   "ninja"
   "gdb"
+  "go"
   "python"
   "nodejs"
   "npm"
+  "kotlin"
 # ---------- # 
   "ttf-meslo-nerd"
   "powerline-fonts"
@@ -102,27 +102,26 @@ aurpkgs=(
   "upd72020x-fw"
   "ast-firmware"
   "visual-studio-code-bin"
-  "anydesk-bin"
   "rustdesk-bin"
-  "zen-browser-bin"
   "brave-bin"
-  "onlyoffice-bin"
   "megasync-bin"
-  "extension-manager"
   "ttf-maple"
+  "ttf-ms-win11-auto"
   "jdk-temurin"
+  "vmware-workstation"
+  "kanata-bin"
 )
-
-for pkg in ${aurpkgs[@]}; do
-  echo "-- Installing: $pkg"
-  yay -S --noconfirm ${pkg}
-done
 
 echo "--- Enabling Services ---"
 
 sudo systemctl enable cups.service
 sudo systemctl enable cups.socket
 sudo systemctl start cups.service
+
+sudo systemctl enable vmware-networks.service
+sudo systemctl start vmware-networks.service
+sudo systemctl enable vmware-usbarbitrator
+sudo systemctl start vmware-usbarbitrator
 
 modprobe btusb
 sudo systemctl enable bluetooth.service
@@ -139,21 +138,21 @@ echo "--- Configuring Zsh ---"
 chsh -s $(which zsh)
 ln -sf $PWD/config/.zshrc ~/
 
-echo "--- Configuring Ghostty ---"
+echo "--- Configuring Kitty ---"
 
-mkdir -p ~/.config/ghostty/
-ln -sf $PWD/config/ghostty/config ~/.config/ghostty/
+mkdir -p ~/.config/kitty/
+ln -sf $PWD/config/kitty/kitty.conf ~/.config/kitty/
+ln -sf $PWD/config/kitty/current-theme.conf ~/.config/kitty/
 
-echo "--- Configuring Neovim ---"
+# echo "--- Installing Language Servers ---"
 
-ln -sf $PWD/config/nvim ~/.config/
+# sudo pacman -S --needed --noconfirm pyright go
 
-echo "--- Installing Language Servers ---"
-
-sudo pacman -S --needed --noconfirm pyright
-
-sudo npm i -g vscode-langservers-extracted
-sudo npm install -g typescript typescript-language-server
+# go install golang.org/x/tools/gopls@latest
+# go install github.com/go-delve/delve/cmd/dlv@latest
+# go install golang.org/x/tools/cmd/goimports@latest
+# go install github.com/nametake/golangci-lint-langserver@latest
+# go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
 
 echo "--- Tmux ---"
 
@@ -168,13 +167,26 @@ echo "--- Configuring Nvidia ---"
 
 sudo pacman -S --needed --noconfirm libva-nvidia-driver
 
+sudo systemctl daemon-reload
 sudo systemctl enable nvidia-suspend.service
 sudo systemctl enable nvidia-hibernate.service
 sudo systemctl enable nvidia-resume.service
+sudo systemctl daemon-reload
 
-sudo ln -sf $PWD/config/nvidia/nvidia.conf /etc/modprobe.d/
-sudo ln -sf $PWD/config/nvidia/nvidia_drm.conf /etc/modprobe.d/
+sudo cp -r $PWD/config/nvidia/nvidia.conf /etc/modprobe.d/
+sudo cp -r $PWD/config/nvidia/nvidia_drm.conf /etc/modprobe.d/
 sudo ln -sf $PWD/config/nvidia/environment /etc/
+
+echo "--- Configuring Kanata ---"
+
+sudo cp -r $PWD/config/kanata/kanata.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable kanata.service
+sudo systemctl start kanata.service
+sudo systemctl daemon-reload
+
+mkdir -p ~/.config/kanata
+ln -sf $PWD/config/kanata/main.kbd ~/.config/kanata/
 
 echo "--- Cleaning Up ---"
 
