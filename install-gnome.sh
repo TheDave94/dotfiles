@@ -138,11 +138,14 @@ echo "--- Configuring Zsh ---"
 chsh -s $(which zsh)
 ln -sf $PWD/config/.zshrc ~/
 
-echo "--- Configuring Kitty ---"
+echo "--- Configuring Ghostty ---"
 
-mkdir -p ~/.config/kitty/
-ln -sf $PWD/config/kitty/kitty.conf ~/.config/kitty/
-ln -sf $PWD/config/kitty/current-theme.conf ~/.config/kitty/
+# mkdir -p ~/.config/kitty/
+# ln -sf $PWD/config/kitty/kitty.conf ~/.config/kitty/
+# ln -sf $PWD/config/kitty/current-theme.conf ~/.config/kitty/
+
+mkdir -p ~/.config/ghostty/
+ln -sf $PWD/config/ghostty/config ~/.config/ghostty/
 
 # echo "--- Installing Language Servers ---"
 
