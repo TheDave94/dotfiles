@@ -1,9 +1,6 @@
 # Ensure Scoop is installed
 if (-not (Get-Command scoop -ErrorAction SilentlyContinue)) {
-#   If you want to install to a different location, use this commmand first! It will not work, when you run it with the tool. 
-#   [System.Environment]::SetEnvironmentVariable('SCOOP', 'D:\Scoop', 'User')
-
-    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+    
     Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 
     Write-Host "Scoop installed! Please run Script again."
