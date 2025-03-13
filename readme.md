@@ -10,7 +10,7 @@ Before you start the installation, make sure to adjust the software you want or 
 
 ```bash
 $ cd ~/.config
-$ git clone https://github.com/f0xfiles/dotfiles.git
+$ git clone https://github.com/f0xb17/dotfiles.git
 $ cd dotfiles
 $ chmod 755 install.sh
 $ ./install.sh
@@ -19,7 +19,7 @@ $ ./install.sh
 * On Windows:
 
 ```powershell
-$ git clone https://github.com/f0xfiles/dotfiles.git
+$ git clone https://github.com/f0xb17/dotfiles.git
 $ cd dotfiles
 $ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 $ ./install.ps1
