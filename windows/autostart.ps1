@@ -1,5 +1,9 @@
-# Run Scoop Updates
+# Update Scoop
+scoop update
+# Update Scoop Apps
 scoop list | foreach { scoop update $_.Name }
+# Cleanup Scoop Apps
+scoop list | foreach { scoop cleanup $_.Name }
 
 # Get tmp path
 $TempPath = [System.IO.Path]::GetTempPath()
