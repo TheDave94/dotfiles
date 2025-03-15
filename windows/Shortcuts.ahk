@@ -1,86 +1,85 @@
-﻿; Alt + W = Pfeiltaste Hoch
-!w::
+; Capslock + W = Pfeiltaste Hoch
+CapsLock & w::
 {
     Send "{Up}"
 }
 
-; Alt + S = Pfeiltaste Runter
-!s::
+; Capslock + S = Pfeiltaste Runter
+CapsLock & s::
 {
     Send "{Down}"
 }
 
-; Alt + A = Pfeiltaste Links
-!a::
+; Capslock + A = Pfeiltaste Links
+CapsLock & a::
 {
     Send "{Left}"
 }
 
-; Alt + D = Pfeiltaste Rechts
-!d::
+; Capslock + D = Pfeiltaste Rechts
+CapsLock & d::
 {
     Send "{Right}"
 }
 
-; Alt + Y = <
-!y::
+; Capslock + Y = <
+; Capslock + Shift + Y = >
+CapsLock & y::
 {
-    Send "<"
+  If GetKeyState("Shift", "P")
+	  Send ">"
+  Else
+	  Send "<"
+  Return
 }
 
-; Alt + Shift + Y = >
-!+y::
-{
-    Send ">"
-}
-
-; Alt + 1 bis 0 = Numblock 1 bis 0
-!1::
+; Capslock + 1 bis 0 = Numblock 1 bis 0
+CapsLock & 1::
 {
     Send "{Numpad1}"
 }
 
-!2::
+CapsLock & 2::
 {
     Send "{Numpad2}"
 }
 
-!3::
+CapsLock & 3::
 {
     Send "{Numpad3}"
 }
 
-!4::
+CapsLock & 4::
 {
     Send "{Numpad4}"
 }
 
-!5::
+CapsLock & 5::
 {
     Send "{Numpad5}"
 }
 
-!6::
+CapsLock & 6::
 {
     Send "{Numpad6}"
 }
 
-!7::
+CapsLock & 7::
 {
     Send "{Numpad7}"
 }
 
-!8::
+CapsLock & 8::
 {
     Send "{Numpad8}"
 }
 
-!9::
+CapsLock & 9::
 {
     Send "{Numpad9}"
 }
 
-!0::
+CapsLock & 0::
 {
     Send "{Numpad0}"
 }
