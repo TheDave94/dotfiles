@@ -1,3 +1,5 @@
+CapsLock::Return
+
 ; Capslock + W = Pfeiltaste Hoch
 CapsLock & w::
 {
