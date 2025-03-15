@@ -1,4 +1,4 @@
-# Scoop-Updates ausfÃ¼hren
+# Run Scoop Updates
 scoop list | foreach { scoop update $_.Name }
 
 # Get tmp path
