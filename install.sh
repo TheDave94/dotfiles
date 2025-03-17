@@ -113,7 +113,7 @@ aurpkgs=(
   "ttf-maple"
   "ttf-ms-win11-auto"
   "jdk-temurin"
-  "vmware-workstation"
+#  "vmware-workstation"
   "kanata-bin"
 )
 
@@ -128,10 +128,12 @@ sudo systemctl enable cups.service
 sudo systemctl enable cups.socket
 sudo systemctl start cups.service
 
-sudo systemctl enable vmware-networks.service
-sudo systemctl start vmware-networks.service
-sudo systemctl enable vmware-usbarbitrator
-sudo systemctl start vmware-usbarbitrator
+
+# Vmware Workstation Services
+# sudo systemctl enable vmware-networks.service
+# sudo systemctl start vmware-networks.service
+# sudo systemctl enable vmware-usbarbitrator
+# sudo systemctl start vmware-usbarbitrator
 
 modprobe btusb
 sudo systemctl enable bluetooth.service
@@ -188,12 +190,6 @@ sudo cp -r $PWD/config/nvidia/nvidia_drm.conf /etc/modprobe.d/
 sudo ln -sf $PWD/config/nvidia/environment /etc/
 
 echo "--- Configuring Kanata ---"
-
-sudo cp -r $PWD/config/kanata/kanata.service /etc/systemd/system/
-sudo systemctl daemon-reload
-sudo systemctl enable kanata.service
-sudo systemctl start kanata.service
-sudo systemctl daemon-reload
 
 mkdir -p ~/.config/kanata
 ln -sf $PWD/config/kanata/main.kbd ~/.config/kanata/
