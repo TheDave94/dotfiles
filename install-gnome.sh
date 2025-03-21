@@ -112,6 +112,11 @@ aurpkgs=(
   "kanata-bin"
 )
 
+for pkg in "${aurpkgs[@]}"; do
+  echo "-- Installing: $pkg"
+  yay -S --needed --noconfirm ${pkg}
+done
+
 echo "--- Enabling Services ---"
 
 sudo systemctl enable cups.service
