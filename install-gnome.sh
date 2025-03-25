@@ -5,7 +5,7 @@ echo "--- Updating System ---"
 sudo pacman -Syuu --noconfirm
 
 # https://unix.stackexchange.com/questions/691386/remove-preinstalled-gnome-applications
-sudo pacman -Rncs --noconfirm vim gnome-music totem yelp gnome-contacts gnome-clocks gnome-maps gnome-weather epiphany malcontent gnome-tour
+sudo pacman -Rncs --noconfirm vim gnome-music totem yelp gnome-contacts gnome-clocks gnome-maps gnome-weather epiphany malcontent gnome-tour htop
 sudo pacman -S --needed --noconfirm flatpak libportal-gtk3
 
 echo "--- Installing AUR-Helper ---"
@@ -38,7 +38,7 @@ pkgs=(
   "ntfs-3g"
   "fastfetch"
   "zlib"
-  "zenity"
+  "yad"
   "zxing-cpp"
   "xvidcore"
   "wget"
@@ -46,15 +46,15 @@ pkgs=(
   "usbutils"
   "aspell"
   "aspell-de"
-  "earlyoom"
   "rsync"
   "reflector"
   "bat"
   "fd"
   "starship"
-  "xclip"
+  "wl-clipboard"
   "tree"
   "ripgrep"
+  "ffmpeg"
   "tmux"
 # ----------- #  
   "bitwarden"
@@ -77,7 +77,6 @@ pkgs=(
   "python"
   "nodejs"
   "npm"
-  "kotlin"
 # ---------- # 
   "ttf-meslo-nerd"
   "powerline-fonts"
@@ -103,12 +102,13 @@ aurpkgs=(
   "ast-firmware"
   "visual-studio-code-bin"
   "rustdesk-bin"
-  "brave-bin"
+#  "brave-bin"
   "megasync-bin"
   "ttf-maple"
-  "ttf-ms-win11-auto"
+#  "ttf-ms-win11-auto"
   "jdk-temurin"
-  "vmware-workstation"
+#  "vmware-workstation"
+#  "vmware-keymaps"
   "kanata-bin"
 )
 
@@ -123,10 +123,10 @@ sudo systemctl enable cups.service
 sudo systemctl enable cups.socket
 sudo systemctl start cups.service
 
-sudo systemctl enable vmware-networks.service
-sudo systemctl start vmware-networks.service
-sudo systemctl enable vmware-usbarbitrator
-sudo systemctl start vmware-usbarbitrator
+# sudo systemctl enable vmware-networks.service
+# sudo systemctl start vmware-networks.service
+# sudo systemctl enable vmware-usbarbitrator
+# sudo systemctl start vmware-usbarbitrator
 
 modprobe btusb
 sudo systemctl enable bluetooth.service
@@ -152,16 +152,6 @@ echo "--- Configuring Ghostty ---"
 mkdir -p ~/.config/ghostty/
 ln -sf $PWD/config/ghostty/config ~/.config/ghostty/
 
-# echo "--- Installing Language Servers ---"
-
-# sudo pacman -S --needed --noconfirm pyright go
-
-# go install golang.org/x/tools/gopls@latest
-# go install github.com/go-delve/delve/cmd/dlv@latest
-# go install golang.org/x/tools/cmd/goimports@latest
-# go install github.com/nametake/golangci-lint-langserver@latest
-# go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
-
 echo "--- Tmux ---"
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -186,12 +176,6 @@ sudo cp -r $PWD/config/nvidia/nvidia_drm.conf /etc/modprobe.d/
 sudo ln -sf $PWD/config/nvidia/environment /etc/
 
 echo "--- Configuring Kanata ---"
-
-sudo cp -r $PWD/config/kanata/kanata.service /etc/systemd/system/
-sudo systemctl daemon-reload
-sudo systemctl enable kanata.service
-sudo systemctl start kanata.service
-sudo systemctl daemon-reload
 
 mkdir -p ~/.config/kanata
 ln -sf $PWD/config/kanata/main.kbd ~/.config/kanata/
