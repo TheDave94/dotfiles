@@ -66,6 +66,7 @@ pkgs=(
   "gimp"
   "lazygit"
   "system-config-printer"
+  "gnome-shell-extension-appindicator"
 # ---------- # 
 # Add some themes here
 # ---------- # 
