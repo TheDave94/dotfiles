@@ -67,6 +67,9 @@ pkgs=(
   "lazygit"
   "system-config-printer"
   "gnome-shell-extension-appindicator"
+  "apparmor"
+  "bubblewrap"
+  "chromium"
 # ---------- # 
 # Add some themes here
 # ---------- # 
