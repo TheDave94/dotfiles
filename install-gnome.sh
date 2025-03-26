@@ -70,6 +70,7 @@ pkgs=(
   "apparmor"
   "bubblewrap"
   "chromium"
+  "snapper"
 # ---------- # 
 # Add some themes here
 # ---------- # 
