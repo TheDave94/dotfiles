@@ -1,5 +1,8 @@
 # f0xfiles
 
+> [!WARNING]  
+> Ongoing rework of the installation script.
+
 This repository contains my dotfiles. Feel free to contribute or use that as a template for your own dotfiles.
 
 ## Usage
@@ -33,3 +36,4 @@ $ ./install.ps1
 ## Requirements
 * [Maple Mono (Nerd) Font](https://github.com/subframe7536/Maple-font): Which is used in most of my configs. Will be installed through AUR.
 * [Kitty](https://sw.kovidgoyal.net/kitty/): Which is my Terminal Emulator of choice. Will be installed with Pacman.
+
