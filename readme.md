@@ -2,6 +2,7 @@
 
 > [!WARNING]  
 > Ongoing rework of the installation script.
+> v 2.0 will be out soon.
 
 This repository contains my dotfiles. Feel free to contribute or use that as a template for your own dotfiles.
 
