@@ -94,9 +94,10 @@ alias dot="cd ~/.config/dotfiles/"
 
 # -- Sourcing
 
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux new-session -A -s default
-fi
+# -- If tmux is to be started directly with the session, uncomment these lines. 
+# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+# exec tmux new-session -A -s default
+# fi
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
