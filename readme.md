@@ -23,7 +23,7 @@ $ ./install.sh
 * On Windows:
 
 ```powershell
-$ git clone https://github.com/f0xb17/dotfiles.git
+$ git -b windows clone https://github.com/f0xb17/dotfiles.git
 $ cd dotfiles
 $ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 $ ./install.ps1
