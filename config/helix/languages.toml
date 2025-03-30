@@ -1,9 +1,0 @@
-# How to add LS: https://github.com/helix-editor/helix/wiki/Language-Server-Configurations
-# Preconfigured: https://github.com/helix-editor/helix/blob/master/languages.toml
-
-# Rust Language
-[language-server.rust-analyzer.config.check]
-command = "clippy"
-
-[language-server.rust-analyzer.config.cargo]
-features = "all"
