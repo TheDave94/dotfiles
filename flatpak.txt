@@ -1,0 +1,8 @@
+com.bitwarden.desktop
+com.spotify.Client
+com.visualstudio.code
+com.github.tchx84.Flatseal
+com.discordapp.Discord
+com.rustdesk.RustDesk
+io.github.giantpinkrobots.flatsweep
+com.todoist.Todoist
