@@ -38,4 +38,8 @@ wl-clipboard
 tree
 ripgrep
 ffmpeg
+cmake
+clang
+ninja
+gdb
 gufw
