@@ -4,7 +4,7 @@
 #               Config Section                   # 
 # -----------------------------------------------#
 
-enable_aur=0
+enable_aur=2
 flatpak=1
 tmux=0
 ghostty=1
@@ -20,7 +20,7 @@ gaming=0
 # your system, but forgot to install gaming.
 # You can skip initial set up and jump to gaming
 
-debug_skip=0
+debug_skip=1
 
 # -----------------------------------------------#
 #                     Design                     #
@@ -365,6 +365,15 @@ if [[ $gaming == 1 ]]; then
                 warning "Installed App: $pkg"
             drawLine
         done
+        # This will install the XBOX controller driver from the AUR.
+        # You Can use that for any XBOX and PlayStation Controller.
+        # I tested it with a PS3 Controller in Cyberpunk 2077.
+        git clone https://aur.archlinux.org/xboxdrv.git
+        cd xboxdrv
+        makepkg -si
+            warning "Installed AUR App: xboxdrv"
+        cd .. && rm -rf xboxdrv
+        drawLine
     section_end
 fi
 
