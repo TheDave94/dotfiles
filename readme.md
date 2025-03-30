@@ -1,9 +1,5 @@
 # f0xfiles
 
-> [!WARNING]  
-> Ongoing rework of the installation script.
-> v 2.0 will be out soon.
-
 This repository contains my dotfiles. Feel free to contribute or use that as a template for your own dotfiles.
 
 ## Usage
@@ -11,6 +7,17 @@ This repository contains my dotfiles. Feel free to contribute or use that as a t
 Before you start the installation, make sure to adjust the software you want or need. Mine is maybe different to yours. 
 
 * On Arch Linux:
+
+You may want to configure this yourself:
+
+```bash
+$ enable_aur=0 <- Installing Paru and Install aur.txt (0 = no / 1 = yes)
+$ flatpak=1 <- Installing Flatpaks (0 = no / 1 = yes)
+$ tmux=0 <- Installing tmux (0 = no / 1 = yes)
+$ ghostty=1 <- Installing Ghostty (0 = no / 1 = yes)
+$ kitty=0 <- Installing Kitty (0 = no / 1 = yes)
+$ gaming=0 <- Installing Gaming Packages (0 = no / 1 = yes)
+```
 
 ```bash
 $ cd ~/.config
