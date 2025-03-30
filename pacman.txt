@@ -38,3 +38,4 @@ wl-clipboard
 tree
 ripgrep
 ffmpeg
+gufw
