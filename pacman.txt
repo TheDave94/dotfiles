@@ -1,5 +1,6 @@
 apparmor
 bubblewrap
+snapper
 linux-firmware-qlogic
 git
 bluez
