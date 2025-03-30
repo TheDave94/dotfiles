@@ -149,7 +149,8 @@ cat << "EOF"
 █████╗  ██║   ██║ ╚███╔╝ █████╗  ██║██║     █████╗  ███████╗
 ██╔══╝  ██║   ██║ ██╔██╗ ██╔══╝  ██║██║     ██╔══╝  ╚════██║
 ██║     ╚██████╔╝██╔╝ ██╗██║     ██║███████╗███████╗███████║
-╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝╚══════╝                                                          
+╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝╚══════╝
+                                                            
 EOF
 
 message "Welcome to FoxFiles."
@@ -263,6 +264,11 @@ if [[ $debug_skip == 0 ]]; then
         echo "ELECTRON_OZONE_PLATFORM_HINT=wayland" | sudo tee -a /etc/environment > /dev/null
             warning "Set: ELECTRON_OZONE_PLATFORM_HINT=wayland"
             warning "If you encounter Problems, set: ELECTRON_OZONE_PLATFORM_HINT=auto"
+    section_end
+
+    draw_section "Mozilla: Wayland Flag"
+        echo "MOZ_ENABLE_WAYLAND=1" | sudo tee -a /etc/environment > /dev/null
+            warning "Set: MOZ_ENABLE_WAYLAND=1"
     section_end
 
     draw_section "Starting Services"
