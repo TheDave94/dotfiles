@@ -4,7 +4,7 @@
 #               Config Section                   # 
 # -----------------------------------------------#
 
-enable_aur=2
+enable_aur=0
 flatpak=1
 tmux=0
 ghostty=1
@@ -20,7 +20,7 @@ gaming=0
 # your system, but forgot to install gaming.
 # You can skip initial set up and jump to gaming
 
-debug_skip=1
+debug_skip=0
 
 # -----------------------------------------------#
 #                     Design                     #
