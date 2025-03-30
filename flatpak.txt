@@ -6,3 +6,4 @@ com.discordapp.Discord
 com.rustdesk.RustDesk
 io.github.giantpinkrobots.flatsweep
 com.todoist.Todoist
+org.chromium.Chromium
