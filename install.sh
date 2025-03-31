@@ -253,6 +253,12 @@ if [[ $debug_skip == 0 ]]; then
                 warning "Enabled nvidia-hibernate.service"
             enableService "nvidia-resume"
                 warning "Enabled nvidia-resume.service"
+            enableService "nvidia-suspend-then-hibernate"
+                warning "Enabled nvidia-suspend-then-hibernate.service"
+            enableService "nvidia-powerd"
+                warning "Enabled nvidia-powerd.service.service"
+            enableService "nvidia-persistenced"
+                warning "Enabled nvidia-persistenced.service"
                 
             sudo systemctl daemon-reload
 
