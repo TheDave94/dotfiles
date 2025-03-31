@@ -75,10 +75,10 @@ alias catnn="bat --style=numbers"
 alias catn="bat --style=numbers,changes"
 
 alias install="sudo pacman -S --needed --noconfirm"
-alias update="yay -Syuu --noconfirm && yay -Scc --noconfirm && yay -Yc --noconfirm && rustup update && clean"
+alias update="sudo pacman -Syyu --noconfirm && flatpak update -y"
 alias remove="sudo pacman -Rncs --noconfirm"
 alias unlock="sudo rm /var/lib/pacman/db.lck"
-alias clean="cd /var/cache/pacman/pkg && sudo rm -rf * && cd ~/.cache/ && find . -mindepth 1 -maxdepth 1 -not \( -name "spotify" -o -name "lutris" \) -exec rm -rf {} + && cd"
+alias clean="cd /var/cache/pacman/pkg && sudo rm -rf * && cd ~/.cache/ && sudo rm -rf * && cd"
 
 
 alias y="yay -S --needed --noconfirm"
