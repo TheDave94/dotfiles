@@ -180,6 +180,12 @@ if [[ $debug_skip == 0 ]]; then
         section_end
     fi
 
+    if type dnf &> /dev/null; then
+        draw_section "Installing Basic Packages"
+            installPackages "dnf.txt" "sudo dnf install -y"
+        section_end
+    fi
+
     draw_section "Remove Libreoffice"
         sudo dnf remove -y libreoffice*
         for folder in ~/.config/libreoffice /etc/libreoffice /usr/lib64/libreoffice /usr/lib/libreoffice /var/lib/libreoffice /usr/share/libreoffice; do
