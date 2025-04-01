@@ -219,6 +219,12 @@ if [[ $debug_skip == 0 ]]; then
         echo "MOZ_ENABLE_WAYLAND=1" | sudo tee -a /etc/environment > /dev/null
             warning "Set: MOZ_ENABLE_WAYLAND=1"
     section_end
+
+    draw_section "Setting Shell"
+        chsh -s $(which zsh)
+        copyFiles "ln -sf" "config/.zshrc" "/home/$(echo $USER)/"
+        warning "Setting ZShell as default shell!"
+    section_end
 fi
 
 draw_section "Rebuilding Intramfs"
