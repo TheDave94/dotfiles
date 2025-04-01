@@ -215,10 +215,13 @@ if [[ $debug_skip == 0 ]]; then
     section_end
 fi
 
+draw_section "Rebuilding Intramfs"
+    sudo dracut --force -v
+section_end
+
 sudo rm -rf /tmp/*
 sudo rm -rf /var/tmp/*
 sudo dnf clean all -y
-sudo dnf remove --unused -y
 
 warning "Installation Finished"
 warning "Press enter to continue"
