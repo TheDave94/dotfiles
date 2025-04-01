@@ -4,3 +4,4 @@ gdb
 ninja-build
 gnome-tweaks
 zsh
+bat
