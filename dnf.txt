@@ -5,3 +5,6 @@ ninja-build
 gnome-tweaks
 zsh
 bat
+eza
+fzf
+zoxide
