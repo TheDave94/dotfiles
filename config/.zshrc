@@ -74,11 +74,10 @@ alias cat="bat"
 alias catnn="bat --style=numbers"
 alias catn="bat --style=numbers,changes"
 
-alias install="sudo pacman -S --needed --noconfirm"
-alias update="sudo pacman -Syyu --noconfirm && flatpak update -y"
-alias remove="sudo pacman -Rncs --noconfirm"
-alias unlock="sudo rm /var/lib/pacman/db.lck"
-alias clean="cd /var/cache/pacman/pkg && sudo rm -rf * && cd ~/.cache/ && sudo rm -rf * && cd"
+alias install="sudo dnf install -y"
+alias update="sudo dnf upgrade -y && sudo dnf update -y && flatpak update -y"
+alias remove="sudo dnf remove -y"
+alias clean="cd /tmp/ && sudo rm -rf * && cd /var/tmp/ && sudo rm -rf * && cd ~/.cache/ && sudo rm -rf * && cd"
 
 
 alias y="yay -S --needed --noconfirm"
