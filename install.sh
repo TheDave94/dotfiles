@@ -4,7 +4,12 @@
 #               Config Section                   # 
 # -----------------------------------------------#
 
+enable_aur=0
 flatpak=1
+tmux=0
+ghostty=1
+kitty=0
+gaming=0
 
 # -----------------------------------------------#
 #                      Debug                     #
@@ -208,6 +213,7 @@ if [[ $debug_skip == 0 ]]; then
         echo "MOZ_ENABLE_WAYLAND=1" | sudo tee -a /etc/environment > /dev/null
             warning "Set: MOZ_ENABLE_WAYLAND=1"
     section_end
+fi
 
 sudo rm -rf /tmp/*
 sudo rm -rf /var/tmp/*
