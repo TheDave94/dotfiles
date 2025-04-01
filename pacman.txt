@@ -44,3 +44,4 @@ clang
 ninja
 gdb
 gufw
+plymouth
