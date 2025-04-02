@@ -44,3 +44,5 @@ ninja
 gdb
 gufw
 plymouth
+fwupd
+gnome-firmware
