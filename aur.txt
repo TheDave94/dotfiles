@@ -1,4 +1,0 @@
-aic94xx-firmware
-wd719x-firmware
-ast-firmware
-maplemono-nf
