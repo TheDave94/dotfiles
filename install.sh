@@ -46,7 +46,7 @@ function drawLine() {
 }
 
 draw_section() {
-    local title="$1"<
+    local title="$1"
     local color_code=33
     local line_length=$(tput cols)
 
@@ -173,7 +173,7 @@ if [[ $debug_skip == 0 ]]; then
 
     if [[ $flatpak == 1 ]]; then
     	draw_section "Removing Flatpaks"
-            for app in org.gnome.Contacts org.gnome.Weather org.gnome.clocks org.gnome.Maps; do
+            for app in org.gnome.Contacts org.gnome.Weather org.gnome.clocks org.gnome.Maps org.gnome.Characters; do
             	flatpak remove -y "$app"
             	warning "Removed Flatpak: $app"
             done
@@ -195,7 +195,7 @@ if [[ $debug_skip == 0 ]]; then
     
     draw_section "Remove Firefox"
         sudo rpm-ostree override remove firefox firefox-langpacks
-        for folder in ~/.mozilla/firefox ~/.cache/mozilla/firefox ~/.config/mozilla ~/.local/share/mozilla ~/.var/app/org.mozilla.firefox /etc/firefox /usr/lib64/firefox /usr/lib/firefox /usr/share/firefox; do
+        for folder in ~/.mozilla/firefox ~/.cache/mozilla/firefox ~/.config/mozilla ~/.local/share/mozilla /etc/firefox /usr/lib/firefox /usr/share/firefox; do
             sudo rm -rf "$folder"
             warning "Delete Folder: $folder"
         done 
