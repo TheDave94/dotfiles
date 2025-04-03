@@ -2,7 +2,7 @@ com.bitwarden.desktop
 com.spotify.Client
 com.visualstudio.code
 com.github.tchx84.Flatseal
-com.discordapp.Discord
+dev.vencord.Vesktop
 com.rustdesk.RustDesk
 io.github.giantpinkrobots.flatsweep
 com.todoist.Todoist
