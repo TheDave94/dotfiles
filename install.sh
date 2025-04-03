@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 # -----------------------------------------------#
@@ -6,6 +7,7 @@
 
 nvidia=1
 flatpak=1
+wlan=0
 
 # -----------------------------------------------#
 #                      Debug                     #
@@ -220,6 +222,14 @@ if [[ $debug_skip == 0 ]]; then
                 	warning "Enabled nvidia-hibernate.service"
             	enableService "nvidia-resume"
                 	warning "Enabled nvidia-resume.service"
+        section_end
+    fi
+    
+    if [[ $wlan == 1 ]]; then
+    	draw_section "W-LAN Setup"
+    	sudo rpm-ostree install iwd
+    	echo "[device]\nwifi.backend=iwd" | sudo tee -a /etc/NetworkManager/conf.d/iwd.conf > /dev/null
+	sudo systemctl restart NetworkManager
         section_end
     fi
     
