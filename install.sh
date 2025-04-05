@@ -215,13 +215,6 @@ if [[ $debug_skip == 0 ]]; then
                 	warning "Set: __GLX_VENDOR_LIBRARY_NAME=nvidia"
         	echo "NVD_BACKEND=direct" | sudo tee -a /etc/environment > /dev/null
                 	warning "Set: NVD_BACKEND=direct"
-                
-                enableService "nvidia-suspend"
-                	warning "Enabled nvidia-suspend.service"
-            	enableService "nvidia-hibernate"
-                	warning "Enabled nvidia-hibernate.service"
-            	enableService "nvidia-resume"
-                	warning "Enabled nvidia-resume.service"
         section_end
     fi
     
