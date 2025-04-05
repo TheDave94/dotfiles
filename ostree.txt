@@ -1,11 +1,1 @@
-clang
-cmake
-gdb
-ninja-build
 gnome-tweaks
-zsh
-bat
-eza
-fzf
-zoxide
-fastfetch
