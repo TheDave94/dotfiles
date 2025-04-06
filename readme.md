@@ -51,3 +51,5 @@ $ ./install.ps1
 * [Maple Mono (Nerd) Font](https://github.com/subframe7536/Maple-font): Which is used in most of my configs. Will be installed through AUR.
 * [Kitty](https://sw.kovidgoyal.net/kitty/): Which is my Terminal Emulator of choice. Will be installed with Pacman.
 
+## To-Do:
+* Adding more Details.
