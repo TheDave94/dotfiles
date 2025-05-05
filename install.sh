@@ -4,13 +4,9 @@
 #               Config Section                   # 
 # -----------------------------------------------#
 
-enable_aur=0
+nvidia=1
 flatpak=1
-tmux=0
-ghostty=1
-kitty=0
 gaming=0
-
 # -----------------------------------------------#
 #                      Debug                     #
 #         You may want to let it as it is!       #
@@ -204,8 +200,28 @@ if [[ $debug_skip == 0 ]]; then
         sudo dnf autoremove
     section_end
 
-    if lspci | grep -i nvidia &> /dev/null || lsmod | grep -i nvidia &> /dev/null; then
-        draw_section "Nvidia Setup"
+    if [[ $nvidia == 1 ]]; then
+    	draw_section "Nvidia Setup"
+		sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda
+			warning "Installed nvidia Driver"
+		sudo dnf kargs --append=rd.driver.blacklist=nouveau --append=modprobe.blacklist=nouveau --append=nvidia-drm.modeset=1 --append=nvidia-drm.fbdev=1 --append=nvidia.NVreg_PreserveVideoMemoryAllocations=1 --append=nvidia.NVreg_TemporaryFilePath=/.nvtmp
+			warning "Blacklisted Nouveau."
+			warning "Activated Nvidia Modesetting."	
+			warning "Activated Nvidia Hibernation."	
+		echo "LIBVA_DRIVER_NAME=nvidia" | sudo tee -a /etc/environment > /dev/null
+        		warning "Set: LIBVA_DRIVER_NAME=nvidia"
+        	echo "__GLX_VENDOR_LIBRARY_NAME=nvidia" | sudo tee -a /etc/environment > /dev/null
+                	warning "Set: __GLX_VENDOR_LIBRARY_NAME=nvidia"
+        	echo "NVD_BACKEND=direct" | sudo tee -a /etc/environment > /dev/null
+                	warning "Set: NVD_BACKEND=direct"
+        section_end
+    fi
+    
+    if [[ $wlan == 1 ]]; then
+    	draw_section "W-LAN Setup"
+    	sudo rpm-ostree install iwd
+    	echo "[device]\nwifi.backend=iwd" | sudo tee -a /etc/NetworkManager/conf.d/iwd.conf > /dev/null
+	sudo systemctl restart NetworkManager
         section_end
     fi
 
