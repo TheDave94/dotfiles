@@ -203,11 +203,8 @@ if [[ $debug_skip == 0 ]]; then
     if [[ $nvidia == 1 ]]; then
     	draw_section "Nvidia Setup"
 		sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda
-			warning "Installed nvidia Driver"
-		sudo dnf kargs --append=rd.driver.blacklist=nouveau --append=modprobe.blacklist=nouveau --append=nvidia-drm.modeset=1 --append=nvidia-drm.fbdev=1 --append=nvidia.NVreg_PreserveVideoMemoryAllocations=1 --append=nvidia.NVreg_TemporaryFilePath=/.nvtmp
-			warning "Blacklisted Nouveau."
-			warning "Activated Nvidia Modesetting."	
-			warning "Activated Nvidia Hibernation."	
+		sudo dnf mark user akmod-nvidia
+  			warning "Installed nvidia Driver"
 		echo "LIBVA_DRIVER_NAME=nvidia" | sudo tee -a /etc/environment > /dev/null
         		warning "Set: LIBVA_DRIVER_NAME=nvidia"
         	echo "__GLX_VENDOR_LIBRARY_NAME=nvidia" | sudo tee -a /etc/environment > /dev/null
