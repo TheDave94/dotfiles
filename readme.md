@@ -6,9 +6,14 @@ This repository contains my dotfiles. Feel free to contribute or use that as a t
 
 Before you start the installation, make sure to adjust the software you want or need. Mine is maybe different to yours. 
 
+* On Fedora
+```bash
+$ git clone -b fedora https://github.com/TheDave94/dotfiles.git
+```
+
 * On Fedora Silverblue
 ```bash
-$ git clone -b silverblue https://github.com/f0xb17/dotfiles.git
+$ git clone -b silverblue https://github.com/TheDave94/dotfiles.git
 ```
 
 * On Arch Linux:
@@ -26,7 +31,7 @@ $ gaming=0 <- Installing Gaming Packages (0 = no / 1 = yes)
 
 ```bash
 $ cd ~/.config
-$ git clone https://github.com/f0xb17/dotfiles.git
+$ git clone https://github.com/TheDave94/dotfiles.git
 $ cd dotfiles
 $ chmod 755 install.sh
 $ ./install.sh
@@ -35,7 +40,7 @@ $ ./install.sh
 * On Windows:
 
 ```powershell
-$ git -b windows clone https://github.com/f0xb17/dotfiles.git
+$ git -b windows clone https://github.com/TheDave94/dotfiles.git
 $ cd dotfiles
 $ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 $ ./install.ps1
