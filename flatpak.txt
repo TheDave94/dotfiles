@@ -2,9 +2,12 @@ com.bitwarden.desktop
 com.spotify.Client
 com.visualstudio.code
 com.github.tchx84.Flatseal
-com.discordapp.Discord
-com.rustdesk.RustDesk
+dev.vencord.Vesktop
 io.github.giantpinkrobots.flatsweep
-com.todoist.Todoist
-org.chromium.Chromium
 org.videolan.VLC
+com.brave.Browser
+eu.betterbird.Betterbird
+com.yubico.yubioath
+net.mullvad.MullvadBrowser
+com.protonvpn.www
+ch.protonmail.protonmail-bridge
