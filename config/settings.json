@@ -1,0 +1,127 @@
+{
+  // ### Visuals ###
+  "editor.fontFamily": "MonoLisa",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 1.5,
+  "editor.fontLigatures": "'feat','ures'",
+  "window.title": "${rootName}",
+  "window.titleBarStyle": "custom",
+  "files.simpleDialog.enable": true,
+  "workbench.sideBar.location": "right",
+  "window.menuBarVisibility": "toggle",
+  "editor.renderWhitespace": "boundary",
+  "workbench.preferredLightColorTheme": "Default Dark Modern",
+  "workbench.preferredDarkColorTheme": "Default Dark Modern",
+  "workbench.preferredHighContrastLightColorTheme": "Default Dark Modern",
+
+  // ### Don't restore any windows ###
+  "window.restoreWindows": "none",
+  "files.hotExit": "off",
+
+  // ### Explorer ###
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+
+  // ### Editor ###
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.lineNumbers": "on",
+  "editor.codeLens": false,
+  "editor.folding": false,
+  "editor.glyphMargin": false,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.cursorBlinking": "blink",
+  "editor.suggestSelection": "first",
+  "editor.guides.bracketPairs": "active",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.renderLineHighlight": "all",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.stickyScroll.enabled": true,
+  "editor.hover.sticky": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "explicit",
+    "source.organizeImports": "never",
+  },
+  "editor.inlineSuggest.enabled": true,
+  "editor.find.addExtraSpaceOnTop": false,
+  "breadcrumbs.enabled": true,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+
+  // ### Workbench ###
+  "workbench.editor.closeOnFileDelete": true,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.perEditorGroup": true,
+  "workbench.editor.limit.value": 5,
+  "workbench.startupEditor": "none",
+  "workbench.list.smoothScrolling": true,
+  "workbench.tree.expandMode": "singleClick",
+
+  // ### Terminal ###
+  // "terminal.integrated.fontFamily": "Maple Mono NF",
+  // "terminal.integrated.fontSize": 15,
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "host-spawn",
+      "args": ["bash"],
+    },
+  },
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.fontWeight": "300",
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  "terminal.integrated.tabs.enabled": true,
+
+  // ### Security ###
+  "security.workspace.trust.untrustedFiles": "open",
+  "security.workspace.trust.enabled": false,
+
+  // ### Settings ###
+  "search.exclude": {
+    "**/*.snap": true,
+    "**/*.svg": true,
+    "**/.git": true,
+    "**/.github": false,
+    "**/.nuxt": true,
+    "**/.output": true,
+    "**/.pnpm": true,
+    "**/.vscode": true,
+    "**/.yarn": true,
+    "**/assets": true,
+    "**/bower_components": true,
+    "**/dist/**": true,
+    "**/logs": true,
+    "**/node_modules": true,
+    "**/out/**": true,
+    "**/package-lock.json": true,
+    "**/pnpm-lock.yaml": true,
+    "**/public": true,
+    "**/temp": true,
+    "**/yarn.lock": true,
+    "**/CHANGELOG*": true,
+    "**/LICENSE*": true,
+  },
+
+  // ### Plugins ###
+  // "go.alternateTools": {
+  //  "go": "/home/fox/.sdk/go/bin"
+  // },
+
+  "css.lint.hexColorLength": "ignore",
+  "prettier.enable": true,
+  "prettier.printWidth": 200,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+
+  "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "git.openRepositoryInParentFolders": "never",
+  "terminal.integrated.initialHint": false,
+  "workbench.iconTheme": "catppuccin-mocha",
+}
